@@ -15,3 +15,35 @@ Author: AutoIOS
 Icon: https://ioscontrol.com/favicon.ico
 Name: AutoIOS Control
 
+Package: com.manhvip.autoios
+Version: 0.2.0-1+debug
+Architecture: iphoneos-arm64
+Maintainer: manhvip
+Installed-Size: 808
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0)
+Filename: debs/com.manhvip.autoios_0.2.0-1+debug_iphoneos-arm64.deb
+Size: 94148
+MD5sum: 8217494206ff47e52460b1e747433840
+SHA1: 76bba9974d18af9f40650e89615e5bdd8bcae120
+SHA256: 09941a4ad45700d9a5ffd6960cabb55445c3553bc703307c543195d5db253a6e
+Section: Tweaks
+Description: autoios — jailbreak automation daemon :2000, Lua scripts, touch injection. Web IDE on PC.
+Author: manhvip
+Name: autoios
+
+Package: com.manhvip.autoios
+Version: 0.2.1-1+debug
+Architecture: iphoneos-arm64
+Maintainer: manhvip
+Installed-Size: 1716
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0)
+Filename: debs/com.manhvip.autoios_0.2.1-1+debug_iphoneos-arm64.deb
+Size: 805384
+MD5sum: 7fdc6daf276fe9f00e4f8c58e0fb50cb
+SHA1: 272c5bd2e6450da863db5398f819b756ff107c2a
+SHA256: 4a09546e30acd4931f7fcefa7352ea20b90d8df53c789bbb1d2c7afdfe9f0990
+Section: Tweaks
+Description: autoios — jailbreak automation daemon :2000, Lua scripts, touch injection. Web IDE on PC.
+Author: manhvip
+Name: AutoIOS
+
