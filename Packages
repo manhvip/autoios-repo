@@ -1,0 +1,17 @@
+Package: com.autoios.control
+Version: 0.1.0-1+debug
+Architecture: iphoneos-arm64
+Maintainer: AutoIOS
+Installed-Size: 808
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0)
+Filename: debs/com.autoios.control_0.1.0-1+debug_iphoneos-arm64.deb
+Size: 93902
+MD5sum: 215bf57b404a6a36fb8072baa17d73c3
+SHA1: 29c77b400352baea57b235a9806c00ca386156bc
+SHA256: 53d57094dac84d4dbbacaa2e7d821f2adf393a5ea2993f39bc9671a4c62ef4ce
+Section: Tweaks
+Description: Jailbreak automation — daemon :9999, Lua scripts, touch injection. Companion Web IDE on PC.
+Author: AutoIOS
+Icon: https://ioscontrol.com/favicon.ico
+Name: AutoIOS Control
+
