@@ -1,14 +1,14 @@
 Package: com.manhvip.autoios
-Version: 0.3.0-1+debug
+Version: 0.3.1-1+debug
 Architecture: iphoneos-arm64
 Maintainer: manhvip
 Installed-Size: 2612
 Depends: firmware (>= 14.0)
-Filename: debs/com.manhvip.autoios_0.3.0-1+debug_iphoneos-arm64.deb
-Size: 1888374
-MD5sum: cb7766ab01386aa007f2293a1b02f2fa
-SHA1: beeec38a3e4d3f64edb76cd1b13f5b21f848d1b0
-SHA256: 889b47ccc0831f45516596e81aeea999b3075691c6fafbd83907654e557221fd
+Filename: debs/com.manhvip.autoios_0.3.1-1+debug_iphoneos-arm64.deb
+Size: 1888546
+MD5sum: ce48b109caf55602c3d6ceca22821bae
+SHA1: d10aa38075e6e4104f9399af10d82c2b862cb410
+SHA256: e8c9dad21970fc9a597caeb9a7841a75b9e3037190f241e3dc1fe73123d3ede0
 Section: Tweaks
 Description: autoios — jailbreak automation daemon :2000, Lua scripts, touch injection. Web IDE on PC.
 Author: manhvip
