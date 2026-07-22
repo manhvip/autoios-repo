@@ -1,16 +1,16 @@
 Package: com.manhvip.autoios
-Version: 0.3.21-1+debug
+Version: 0.3.22-1+debug
 Architecture: iphoneos-arm64
 Maintainer: manhvip
-Installed-Size: 4112
+Installed-Size: 4304
 Depends: firmware (>= 14.0)
-Filename: debs/com.manhvip.autoios_0.3.21-1+debug_iphoneos-arm64.deb
-Size: 2758690
-MD5sum: 10440e98dd83ff8529cc7715e49168c5
-SHA1: cbe616d6195e38a6ded6616ee0d1dac04bc7410b
-SHA256: cd26deec3afba8530c2da59d58fd6cbdd4456f941df99127290752fa20707635
+Filename: debs/com.manhvip.autoios_0.3.22-1+debug_iphoneos-arm64.deb
+Size: 2817066
+MD5sum: abd22bee7c894dba4ddb6f6d3457057b
+SHA1: b4e031c45f2ad6dd8b8161062c8583e00914d0db
+SHA256: c5867027cbaea09cfa02824051b33bf8e16ff10b681311142fd440b255c1619a
 Section: Tweaks
-Description: autoios — jailbreak automation daemon :2000, Lua scripts, touch. View màn cần package tùy chọn autoios-screen.
+Description: autoios — daemon :2000, Lua, touch. View màn: noVNC ↔ TrollVNC (không inject SpringBoard).
 Author: manhvip
 Name: AutoIOS
 
