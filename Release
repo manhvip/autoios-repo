@@ -3,10 +3,10 @@ Label: autoios
 Suite: stable
 Version: 1.0
 Codename: autoios
-Architectures: iphoneos-arm64 iphoneos-arm
+Architectures: iphoneos-arm64
 Components: main
 Description: autoios jailbreak automation packages
-Date: Wed, 22 Jul 2026 17:03:14 UTC
+Date: Wed, 22 Jul 2026 17:18:22 UTC
 MD5Sum:
  f10b7a485666709eb44bec85e5cb5f4a              588 Packages
  0e8a34a00d68ddb4381f262fd5fde577              386 Packages.gz
