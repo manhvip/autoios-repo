@@ -1,32 +1,32 @@
 Package: com.manhvip.autoios
-Version: 0.3.27
+Version: 0.3.28
 Architecture: iphoneos-arm64
 Maintainer: manhvip
-Installed-Size: 7948
+Installed-Size: 4104
 Depends: firmware (>= 14.0)
 Filename: debs/autoios-latest.deb
-Size: 3252148
-MD5sum: 5ce28ebc49392fb70c08c9d38507c962
-SHA1: 212c149522b3bffb5ac1eab0f290eacf17b2c659
-SHA256: 8020f4a2fb9be050939f9b9b8df5a50e9e902c23e86466629a1e5d1f41956d9b
+Size: 2013296
+MD5sum: e1ea9c5198f6b30c4b4e15984e396bae
+SHA1: 5d5dfff6e569a4b44473492b9af561d2fe4a5b3c
+SHA256: 9cd80e7854d73ea3e6fa81d8e931ffe9651b53381e2ae9534405367db3c22d17
 Section: Tweaks
-Description: autoios — daemon :2000 + TrollVNC View. postinst never fails dpkg/Sileo.
+Description: autoios — daemon :2000 (no bundled TrollVNC; like 0.3.24).
 Author: manhvip
 Name: AutoIOS
 
 Package: com.manhvip.autoios
-Version: 0.3.27
+Version: 0.3.28
 Architecture: iphoneos-arm64
 Maintainer: manhvip
-Installed-Size: 7948
+Installed-Size: 4104
 Depends: firmware (>= 14.0)
-Filename: debs/com.manhvip.autoios_0.3.27_iphoneos-arm64.deb
-Size: 3252148
-MD5sum: 5ce28ebc49392fb70c08c9d38507c962
-SHA1: 212c149522b3bffb5ac1eab0f290eacf17b2c659
-SHA256: 8020f4a2fb9be050939f9b9b8df5a50e9e902c23e86466629a1e5d1f41956d9b
+Filename: debs/com.manhvip.autoios_0.3.28_iphoneos-arm64.deb
+Size: 2013296
+MD5sum: e1ea9c5198f6b30c4b4e15984e396bae
+SHA1: 5d5dfff6e569a4b44473492b9af561d2fe4a5b3c
+SHA256: 9cd80e7854d73ea3e6fa81d8e931ffe9651b53381e2ae9534405367db3c22d17
 Section: Tweaks
-Description: autoios — daemon :2000 + TrollVNC View. postinst never fails dpkg/Sileo.
+Description: autoios — daemon :2000 (no bundled TrollVNC; like 0.3.24).
 Author: manhvip
 Name: AutoIOS
 
