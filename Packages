@@ -1,33 +1,16 @@
 Package: com.manhvip.autoios
-Version: 0.3.22-1+debug
+Version: 0.3.23-1+debug
 Architecture: iphoneos-arm64
 Maintainer: manhvip
-Installed-Size: 4304
+Installed-Size: 4492
 Depends: firmware (>= 14.0)
-Filename: debs/com.manhvip.autoios_0.3.22-1+debug_iphoneos-arm64.deb
-Size: 2817066
-MD5sum: abd22bee7c894dba4ddb6f6d3457057b
-SHA1: b4e031c45f2ad6dd8b8161062c8583e00914d0db
-SHA256: c5867027cbaea09cfa02824051b33bf8e16ff10b681311142fd440b255c1619a
+Filename: debs/com.manhvip.autoios_0.3.23-1+debug_iphoneos-arm64.deb
+Size: 2831240
+MD5sum: 7b9dcd27f7617bc758e6cd4bb2078381
+SHA1: ea90653c7c287c334b4da2388bbfd44459e69eb4
+SHA256: ebd831f683c8826d3c3342502e020acb46cce505d07fd4401e3c6b170c697346
 Section: Tweaks
-Description: autoios — daemon :2000, Lua, touch. View màn: noVNC ↔ TrollVNC (không inject SpringBoard).
+Description: autoios — daemon :2000 + built-in screen mirror (IOSControl-style). Kill-switch: /var/tmp/autoios.nocap
 Author: manhvip
 Name: AutoIOS
-
-Package: com.manhvip.autoios-screen
-Version: 0.1.1-1+debug
-Architecture: iphoneos-arm64
-Maintainer: manhvip
-Installed-Size: 196
-Depends: firmware (>= 14.0), ellekit, com.manhvip.autoios (>= 0.3.20)
-Filename: debs/com.manhvip.autoios-screen_0.1.1-1+debug_iphoneos-arm64.deb
-Size: 17546
-MD5sum: 58d9562f0876d025e6fe4538d6c074a6
-SHA1: 3419d51da4a67cf418041a6b618d8c1e6c9b25ac
-SHA256: 2339082732da0a2cce52664412eea1a12c9733c8a39892784aa208aa5675e82e
-Section: Tweaks
-Priority: optional
-Description: OPTIONAL screen capture (DEFAULT OFF — enable manually). May Safe Mode if enabled on Dopamine.
-Author: manhvip
-Name: AutoIOS Screen Capture
 
