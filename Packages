@@ -13,7 +13,7 @@ MD5sum: 772eed91bd3728d19cb76b97ae90248b
 SHA1: 8348faa4cb54855c786da969ae1856386e15c369
 SHA256: 042fbe91149b0282c59e7124ced2a815326b81aa677034242a82289ddf59f4a3
 Section: Tweaks
-Description: autoios — daemon :2000 + bundled TrollVNC (AutoIOS paths, no IOSControl file clash).
+Description: autoios daemon :2000 + bundled TrollVNC View.
 Author: manhvip
 Name: AutoIOS
 
