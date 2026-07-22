@@ -1,0 +1,8 @@
+# Keep apt metadata LF-only (CRLF breaks Sileo hash checks)
+Packages text eol=lf
+Release text eol=lf
+index.html text eol=lf
+*.sh text eol=lf
+debs/*.deb binary
+Packages.gz binary
+Packages.bz2 binary

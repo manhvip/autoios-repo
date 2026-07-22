@@ -1,8 +1,10 @@
 #!/bin/sh
 # Conflict-safe AutoIOS install (SSH root)
 set -e
-URL="https://raw.githubusercontent.com/manhvip/autoios-repo/main/debs/autoios-latest.deb"
 DEB="/var/tmp/autoios.deb"
+# Prefer GitHub raw by commit-less github.com/raw (less CDN lag than raw.githubusercontent.com)
+URL1="https://github.com/manhvip/autoios-repo/raw/main/debs/autoios-latest.deb"
+URL2="https://cdn.jsdelivr.net/gh/manhvip/autoios-repo@main/debs/autoios-latest.deb"
 
 echo "==> Remove conflicting optional VNC package (if any)"
 dpkg -r com.manhvip.autoios-vnc 2>/dev/null || true
@@ -12,7 +14,11 @@ echo "==> Fix half-configured packages"
 dpkg --configure -a 2>/dev/null || true
 
 echo "==> Download"
-curl -L --fail -o "$DEB" "$URL"
+rm -f "$DEB"
+if ! curl -L --fail -o "$DEB" "$URL1"; then
+  echo "fallback jsDelivr..."
+  curl -L --fail -o "$DEB" "$URL2"
+fi
 ls -la "$DEB"
 
 echo "==> Install"
