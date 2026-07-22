@@ -15,19 +15,19 @@ Author: manhvip
 Name: AutoIOS
 
 Package: com.manhvip.autoios-screen
-Version: 0.1.0-1+debug
+Version: 0.1.1-1+debug
 Architecture: iphoneos-arm64
 Maintainer: manhvip
 Installed-Size: 196
 Depends: firmware (>= 14.0), ellekit, com.manhvip.autoios (>= 0.3.20)
-Filename: debs/com.manhvip.autoios-screen_0.1.0-1+debug_iphoneos-arm64.deb
-Size: 17338
-MD5sum: 68dbb3147b834897967a2804ab2c82f4
-SHA1: 47b8da87fe3b70d1d3acb3d09e6c223d8a383ec9
-SHA256: b297d9fed27183622ab3b403df4bb40f85dd18e8266ba6f16399c6af8255075b
+Filename: debs/com.manhvip.autoios-screen_0.1.1-1+debug_iphoneos-arm64.deb
+Size: 17546
+MD5sum: 58d9562f0876d025e6fe4538d6c074a6
+SHA1: 3419d51da4a67cf418041a6b618d8c1e6c9b25ac
+SHA256: 2339082732da0a2cce52664412eea1a12c9733c8a39892784aa208aa5675e82e
 Section: Tweaks
 Priority: optional
-Description: OPTIONAL SpringBoard screen capture for AutoIOS Web IDE View. May cause Safe Mode on some devices — remove if so.
+Description: OPTIONAL screen capture (DEFAULT OFF — enable manually). May Safe Mode if enabled on Dopamine.
 Author: manhvip
 Name: AutoIOS Screen Capture
 
