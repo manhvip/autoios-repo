@@ -31,36 +31,36 @@ Author: manhvip
 Name: AutoIOS
 
 Package: com.manhvip.autoios-vnc
-Version: 0.1.1
+Version: 0.1.2
 Architecture: iphoneos-arm64
 Maintainer: manhvip
-Installed-Size: 3884
+Installed-Size: 3888
 Depends: firmware (>= 14.0)
 Filename: debs/autoios-vnc-latest.deb
-Size: 1418798
-MD5sum: 5d32e2b801c2cacc56464258881e40e2
-SHA1: 1c78da21b4bd54d3e7067bd2ce63d6c34fcbec29
-SHA256: f77db1755ba3ce1a3e4a82263c8d7b17155361805bd4212401ec6372a9922719
+Size: 1418394
+MD5sum: 005aef40ffb02f87858105872af38fa3
+SHA1: 3feebca4408460a889994b8639b9d1bd42acd17c
+SHA256: b0d04d51a7e57f0d5c6740728c9f0fa75d96b745d9df0656c23e2dd6840af7cd
 Section: Utilities
 Priority: optional
-Description: OPTIONAL TrollVNC for AutoIOS View (port 5901). No hard depends — install anytime via SSH.
+Description: OPTIONAL TrollVNC for AutoIOS View (port 5901). Binary in usr/local/bin.
 Author: manhvip
 Name: AutoIOS View VNC
 
 Package: com.manhvip.autoios-vnc
-Version: 0.1.1
+Version: 0.1.2
 Architecture: iphoneos-arm64
 Maintainer: manhvip
-Installed-Size: 3884
+Installed-Size: 3888
 Depends: firmware (>= 14.0)
-Filename: debs/com.manhvip.autoios-vnc_0.1.1_iphoneos-arm64.deb
-Size: 1418798
-MD5sum: 5d32e2b801c2cacc56464258881e40e2
-SHA1: 1c78da21b4bd54d3e7067bd2ce63d6c34fcbec29
-SHA256: f77db1755ba3ce1a3e4a82263c8d7b17155361805bd4212401ec6372a9922719
+Filename: debs/com.manhvip.autoios-vnc_0.1.2_iphoneos-arm64.deb
+Size: 1418394
+MD5sum: 005aef40ffb02f87858105872af38fa3
+SHA1: 3feebca4408460a889994b8639b9d1bd42acd17c
+SHA256: b0d04d51a7e57f0d5c6740728c9f0fa75d96b745d9df0656c23e2dd6840af7cd
 Section: Utilities
 Priority: optional
-Description: OPTIONAL TrollVNC for AutoIOS View (port 5901). No hard depends — install anytime via SSH.
+Description: OPTIONAL TrollVNC for AutoIOS View (port 5901). Binary in usr/local/bin.
 Author: manhvip
 Name: AutoIOS View VNC
 
