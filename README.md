@@ -22,7 +22,7 @@ https://purge.jsdelivr.net/gh/manhvip/autoios-repo@main/Release
 
 ```bash
 curl -L -o /var/tmp/autoios.deb \
-  "https://cdn.jsdelivr.net/gh/manhvip/autoios-repo@main/debs/com.manhvip.autoios_0.3.18-1+debug_iphoneos-arm64.deb"
+  "https://github.com/manhvip/autoios-repo/raw/main/debs/com.manhvip.autoios_0.3.19-1%2Bdebug_iphoneos-arm64.deb"
 dpkg -i /var/tmp/autoios.deb
 # remove Safe Mode dylibs if any
 rm -f /var/jb/Library/MobileSubstrate/DynamicLibraries/AutoiosScreen.*
