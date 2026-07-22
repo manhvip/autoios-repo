@@ -1,16 +1,33 @@
 Package: com.manhvip.autoios
-Version: 0.3.20-1+debug
+Version: 0.3.21-1+debug
 Architecture: iphoneos-arm64
 Maintainer: manhvip
 Installed-Size: 4112
 Depends: firmware (>= 14.0)
-Filename: debs/com.manhvip.autoios_0.3.20-1+debug_iphoneos-arm64.deb
-Size: 2758542
-MD5sum: 0bd370257307bee56f1ec2c8aacc8669
-SHA1: 287669dcc5b69ca1afd2ae36b28ea148e12bd9ab
-SHA256: 5c2decf50d2dfc86ee04d12db17a914a558b6854af3f011950fe44f8373355d1
+Filename: debs/com.manhvip.autoios_0.3.21-1+debug_iphoneos-arm64.deb
+Size: 2758690
+MD5sum: 10440e98dd83ff8529cc7715e49168c5
+SHA1: cbe616d6195e38a6ded6616ee0d1dac04bc7410b
+SHA256: cd26deec3afba8530c2da59d58fd6cbdd4456f941df99127290752fa20707635
 Section: Tweaks
-Description: autoios — jailbreak automation daemon :2000, Lua scripts, touch injection. Web IDE on PC.
+Description: autoios — jailbreak automation daemon :2000, Lua scripts, touch. View màn cần package tùy chọn autoios-screen.
 Author: manhvip
 Name: AutoIOS
+
+Package: com.manhvip.autoios-screen
+Version: 0.1.0-1+debug
+Architecture: iphoneos-arm64
+Maintainer: manhvip
+Installed-Size: 196
+Depends: firmware (>= 14.0), ellekit, com.manhvip.autoios (>= 0.3.20)
+Filename: debs/com.manhvip.autoios-screen_0.1.0-1+debug_iphoneos-arm64.deb
+Size: 17338
+MD5sum: 68dbb3147b834897967a2804ab2c82f4
+SHA1: 47b8da87fe3b70d1d3acb3d09e6c223d8a383ec9
+SHA256: b297d9fed27183622ab3b403df4bb40f85dd18e8266ba6f16399c6af8255075b
+Section: Tweaks
+Priority: optional
+Description: OPTIONAL SpringBoard screen capture for AutoIOS Web IDE View. May cause Safe Mode on some devices — remove if so.
+Author: manhvip
+Name: AutoIOS Screen Capture
 
