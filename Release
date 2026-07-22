@@ -6,12 +6,12 @@ Codename: autoios
 Architectures: iphoneos-arm64 iphoneos-arm
 Components: main
 Description: autoios jailbreak automation packages
-Date: Wed, 22 Jul 2026 01:24:38 UTC
+Date: Wed, 22 Jul 2026 01:29:58 UTC
 MD5Sum:
- 8a70a3da3a6921ab4452f3bac2580d30              547 Packages
- 2d45589d2de0c3402407527110f12759              396 Packages.gz
- e35d4de79ee0fa57eba803191a2cbf3b              446 Packages.bz2
+ c1593db65e1afc71ccac954f1e1ac2ef              547 Packages
+ e73c2deb5cc2a54e5d47e43f432ce11b              396 Packages.gz
+ 7865a6e3096d3b87cf9399ae283a1fee              442 Packages.bz2
 SHA256:
- 21cfc52cf184f59381c931a5ef55adf1e177216da09afcaf509ca38a0fdf093b              547 Packages
- 542ce2492271a81271725f5ec714909708f22177f80516f4c85dbfee4d06417f              396 Packages.gz
- af2f258985c48260dfe26ac8d59c5d0f5099b4be092aac8466b224848d8d84fc              446 Packages.bz2
+ 29f6f73b3b7b46210cc899d33bd935cf107e0db7cde18af6cd54672aed4be2a3              547 Packages
+ 9bc36a8dd500fc02401c2b4605244ae3705bad85cb381fa6f0c66e39d2f43172              396 Packages.gz
+ 2dc555bc40192e77dd63de9cf0ee39f0ff2330501cba9b1924c3f632516d71ef              442 Packages.bz2
