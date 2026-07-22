@@ -1,16 +1,32 @@
 Package: com.manhvip.autoios
-Version: 0.3.26
+Version: 0.3.27
 Architecture: iphoneos-arm64
 Maintainer: manhvip
 Installed-Size: 7948
 Depends: firmware (>= 14.0)
-Filename: debs/com.manhvip.autoios_0.3.26_iphoneos-arm64.deb
-Size: 3252438
-MD5sum: 4038fd5f40a700fae580577cac40f837
-SHA1: e5a79e3b6610446dc02afebffee8d4f62e462aea
-SHA256: d5e153a23cefb43deeedc006c92ba1b5fc13cd629acc00ba9a1c459e6af09d4b
+Filename: debs/autoios-latest.deb
+Size: 3252148
+MD5sum: 5ce28ebc49392fb70c08c9d38507c962
+SHA1: 212c149522b3bffb5ac1eab0f290eacf17b2c659
+SHA256: 8020f4a2fb9be050939f9b9b8df5a50e9e902c23e86466629a1e5d1f41956d9b
 Section: Tweaks
-Description: autoios — daemon :2000 + bundled TrollVNC View (IOSControl-style). Fix Sileo stuck on 0.3.24.
+Description: autoios — daemon :2000 + TrollVNC View. postinst never fails dpkg/Sileo.
+Author: manhvip
+Name: AutoIOS
+
+Package: com.manhvip.autoios
+Version: 0.3.27
+Architecture: iphoneos-arm64
+Maintainer: manhvip
+Installed-Size: 7948
+Depends: firmware (>= 14.0)
+Filename: debs/com.manhvip.autoios_0.3.27_iphoneos-arm64.deb
+Size: 3252148
+MD5sum: 5ce28ebc49392fb70c08c9d38507c962
+SHA1: 212c149522b3bffb5ac1eab0f290eacf17b2c659
+SHA256: 8020f4a2fb9be050939f9b9b8df5a50e9e902c23e86466629a1e5d1f41956d9b
+Section: Tweaks
+Description: autoios — daemon :2000 + TrollVNC View. postinst never fails dpkg/Sileo.
 Author: manhvip
 Name: AutoIOS
 
