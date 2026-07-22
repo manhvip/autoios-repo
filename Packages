@@ -1,16 +1,16 @@
 Package: com.manhvip.autoios
-Version: 0.3.25-1+debug
+Version: 0.3.26
 Architecture: iphoneos-arm64
 Maintainer: manhvip
-Installed-Size: 8148
+Installed-Size: 7948
 Depends: firmware (>= 14.0)
-Filename: debs/com.manhvip.autoios_0.3.25-1+debug_iphoneos-arm64.deb
-Size: 4162616
-MD5sum: ff06df83a7c47c38f5fb6c33f8562562
-SHA1: ab8738cc50082940f5fc163a42724e5d1da5d680
-SHA256: 957cde2b491b7a648dd1bf6d23b1b626fd413cc8f1e08e87fd224bc57af77dfa
+Filename: debs/com.manhvip.autoios_0.3.26_iphoneos-arm64.deb
+Size: 3252438
+MD5sum: 4038fd5f40a700fae580577cac40f837
+SHA1: e5a79e3b6610446dc02afebffee8d4f62e462aea
+SHA256: d5e153a23cefb43deeedc006c92ba1b5fc13cd629acc00ba9a1c459e6af09d4b
 Section: Tweaks
-Description: autoios — daemon :2000 + built-in TrollVNC (IOSControl-style View, no SpringBoard screencap).
+Description: autoios — daemon :2000 + bundled TrollVNC View (IOSControl-style). Fix Sileo stuck on 0.3.24.
 Author: manhvip
 Name: AutoIOS
 
