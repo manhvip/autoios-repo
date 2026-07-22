@@ -1,16 +1,16 @@
 Package: com.manhvip.autoios
-Version: 0.3.23-1+debug
+Version: 0.3.24-1+debug
 Architecture: iphoneos-arm64
 Maintainer: manhvip
-Installed-Size: 4492
+Installed-Size: 4304
 Depends: firmware (>= 14.0)
-Filename: debs/com.manhvip.autoios_0.3.23-1+debug_iphoneos-arm64.deb
-Size: 2831240
-MD5sum: 7b9dcd27f7617bc758e6cd4bb2078381
-SHA1: ea90653c7c287c334b4da2388bbfd44459e69eb4
-SHA256: ebd831f683c8826d3c3342502e020acb46cce505d07fd4401e3c6b170c697346
+Filename: debs/com.manhvip.autoios_0.3.24-1+debug_iphoneos-arm64.deb
+Size: 2817138
+MD5sum: 29589996174141c56ed631fcfea95d4e
+SHA1: dbea3fed62772b1a789609772ff71b1b40e71a7b
+SHA256: c3e694129d6d9221dadae08c84d5dc6ca0d0ced3abec6dccf5433dab25979e92
 Section: Tweaks
-Description: autoios — daemon :2000 + built-in screen mirror (IOSControl-style). Kill-switch: /var/tmp/autoios.nocap
+Description: autoios — daemon :2000, Lua, touch. NO SpringBoard inject (Safe Mode fix). View: TrollVNC/noVNC.
 Author: manhvip
 Name: AutoIOS
 
