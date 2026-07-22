@@ -6,9 +6,12 @@
 https://raw.githubusercontent.com/manhvip/autoios-repo/main/
 ```
 
-Dùng **raw.githubusercontent** (ít cache / ít lỗi đỏ khi Refresh).
+Dung **raw.githubusercontent** (it cache / it loi do khi Refresh).
 
-Backup CDN (nếu dùng jsDelivr mà Refresh đỏ → purge rồi thử lại):
+**Khong dung** `https://manhvip.github.io/autoios-repo/` — Sileo hay bao:
+`Hash for Packages.bz2 ... is invalid!`
+
+Backup CDN:
 
 ```
 https://cdn.jsdelivr.net/gh/manhvip/autoios-repo@main/
@@ -19,7 +22,6 @@ https://cdn.jsdelivr.net/gh/manhvip/autoios-repo@main/
 ```
 https://purge.jsdelivr.net/gh/manhvip/autoios-repo@main/Packages
 https://purge.jsdelivr.net/gh/manhvip/autoios-repo@main/Packages.gz
-https://purge.jsdelivr.net/gh/manhvip/autoios-repo@main/Packages.bz2
 https://purge.jsdelivr.net/gh/manhvip/autoios-repo@main/Release
 ```
 
