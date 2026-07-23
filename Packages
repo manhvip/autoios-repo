@@ -1,5 +1,5 @@
 Package: com.manhvip.autoios
-Version: 0.3.47
+Version: 0.3.48
 Architecture: iphoneos-arm64
 Maintainer: manhvip
 Installed-Size: 9524
@@ -7,11 +7,11 @@ Depends: firmware (>= 14.0)
 Conflicts: com.manhvip.autoios-vnc
 Replaces: com.manhvip.autoios-vnc
 Provides: com.manhvip.autoios-vnc
-Filename: debs/com.manhvip.autoios_0.3.47_iphoneos-arm64.deb
-Size: 3483050
-MD5sum: c78069cca5af05b9f6b412a00c66abd0
-SHA1: d9df12cdaa2259bb06855de32296d891ba2d0107
-SHA256: adcfa4ff12420f7001b4626fc02c278564dd7cca405f67d2f8a4fb42e7025aeb
+Filename: debs/com.manhvip.autoios_0.3.48_iphoneos-arm64.deb
+Size: 3484164
+MD5sum: c726146f5feac55f5f72fddb830bae51
+SHA1: e02c62bbb8d7fc65b41dd2ac1f70d0bcc5c2fdc6
+SHA256: e520ad0b25a0c165903d751958eb5c81200eb6ae02df640ce26bd7238b6648f1
 Section: Tweaks
 Description: autoios daemon :2000 + bundled TrollVNC View.
 Author: manhvip
