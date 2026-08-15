@@ -1,5 +1,5 @@
 Package: com.manhvip.autoios
-Version: 0.4.08
+Version: 0.4.09
 Architecture: iphoneos-arm64
 Maintainer: manhvip
 Installed-Size: 6952
@@ -7,11 +7,11 @@ Depends: firmware (>= 14.0), mobilesubstrate
 Conflicts: com.manhvip.autoios-vnc
 Replaces: com.manhvip.autoios-vnc
 Provides: com.manhvip.autoios-vnc
-Filename: debs/com.manhvip.autoios_0.4.08_iphoneos-arm64.deb
-Size: 1926648
-MD5sum: 2af3fb8e7f13872f8b18dab473420c2f
-SHA1: 078da208e0a984ffa4a45a5fe4192163db27b4d5
-SHA256: 267eb1f5498a92aee37d51aa99dfa817b98bf6137a463a498e62ac1ecf7ff2f5
+Filename: debs/com.manhvip.autoios_0.4.09_iphoneos-arm64.deb
+Size: 1927248
+MD5sum: 96d1e69d1995bab512db4d6a911a264e
+SHA1: 7718c59470d8e9742091d380e1ba6a622150fb64
+SHA256: 7c055eae243528e387304a81536f6abbb1c96793e93288e9034cd99b8b654859
 Section: Tweaks
 Description: autoios HTTP :2000 in SpringBoard + bundled TrollVNC View.
 Author: manhvip
