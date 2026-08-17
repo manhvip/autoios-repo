@@ -4,15 +4,15 @@ Depends: firmware (>= 14.0), mobilesubstrate
 Description: Tap via TrollVNC RFB (same as View click). No BKHID/IOHID.
 Maintainer: manhvip
 Author: manhvip
-Filename: debs/com.manhvip.autoios_0.4.15_iphoneos-arm64.deb
-Size: 1944574
-MD5sum: 732822147f16acfc350a3c6c3edabf55
-SHA1: 7abdc141d9afee355d361fbf0446dcb265a4cd48
-SHA256: f9d59d1ef558e13a3164cf062cedc37dda099d1efecf9310d7231b517f9e148b
+Filename: debs/com.manhvip.autoios_0.4.16_iphoneos-arm64.deb
+Size: 1946030
+MD5sum: b1ac9d7a5677c7632b078186bee82d6c
+SHA1: 55ee2af73465e406cb820375565d3853724dadce
+SHA256: 115745e634319f4789b73f737bc09c1d5b7f37b29cbb0f92fc15bdbaf632971a
 Section: Tweaks
 Replaces: com.manhvip.autoios-vnc
 Conflicts: com.manhvip.autoios-vnc
 Provides: com.manhvip.autoios-vnc
 Architecture: iphoneos-arm64
-Version: 0.4.15
+Version: 0.4.16
 Installed-Size: 7012
