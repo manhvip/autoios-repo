@@ -1,148 +1,346 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="dark" data-lang="vi">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#121416">
   <title>AutoIOS - Nguồn Sileo</title>
   <meta name="description" content="Nguồn apt AutoIOS cho Sileo. Cài tweak jailbreak, chạm màn hình qua TrollVNC, viết Lua trên Web IDE.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233a9d6e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="image" href="wiki/hero.jpg">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("autoios-theme");
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        var l = localStorage.getItem("autoios-lang");
+        if (l !== "en" && l !== "vi") {
+          l = String(navigator.language || "").toLowerCase().indexOf("en") === 0 ? "en" : "vi";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.setAttribute("data-lang", l);
+        document.documentElement.setAttribute("lang", l === "en" ? "en" : "vi");
+        document.documentElement.style.colorScheme = t;
+      } catch (e) {}
+    })();
+  </script>
   <style>
-    :root {
-      --bg: #141618;
-      --bg-2: #1b1d20;
-      --ink: #e6e8eb;
-      --muted: #9aa1a8;
-      --line: #2a2e33;
-      --accent: #2fa36b;
-      --accent-ink: #07140d;
-      --font: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --mono: "SF Mono", ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
-      --max: 1120px;
-      --gutter: 24px;
-      --radius: 0;
+    @font-face {
+      font-family: Geist;
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("https://cdn.jsdelivr.net/fontsource/fonts/geist:vf@latest/latin-wght-normal.woff2") format("woff2-variations");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: Geist;
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("https://cdn.jsdelivr.net/fontsource/fonts/geist:vf@latest/latin-ext-wght-normal.woff2") format("woff2-variations");
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: Geist;
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("https://cdn.jsdelivr.net/fontsource/fonts/geist:vf@latest/vietnamese-wght-normal.woff2") format("woff2-variations");
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+    @font-face {
+      font-family: "Geist Mono";
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("https://cdn.jsdelivr.net/fontsource/fonts/geist-mono:vf@latest/latin-wght-normal.woff2") format("woff2-variations");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: "Geist Mono";
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("https://cdn.jsdelivr.net/fontsource/fonts/geist-mono:vf@latest/latin-ext-wght-normal.woff2") format("woff2-variations");
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: "Geist Mono";
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("https://cdn.jsdelivr.net/fontsource/fonts/geist-mono:vf@latest/vietnamese-wght-normal.woff2") format("woff2-variations");
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
     }
 
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg: #eef0f2;
-        --bg-2: #e4e6e9;
-        --ink: #16181a;
-        --muted: #5c636a;
-        --line: #c9ced4;
-        --accent: #1f7a4d;
-        --accent-ink: #f3fff8;
-      }
+    :root {
+      --bg: #121416;
+      --bg-2: #1a1c1f;
+      --ink: #eceef0;
+      --muted: #8b929a;
+      --line: color-mix(in srgb, #eceef0 10%, transparent);
+      --accent: #3a9d6e;
+      --accent-ink: #07140d;
+      --shadow: 0 28px 60px color-mix(in srgb, #080a0c 48%, transparent);
+      --font: Geist, "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: "Geist Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+      --ease: cubic-bezier(0.32, 0.72, 0, 1);
+      --s1: 8px;
+      --s2: 12px;
+      --s3: 16px;
+      --s4: 24px;
+      --s5: 32px;
+      --s6: 48px;
+      --s7: 64px;
+      --s8: 96px;
+      --max: 1120px;
+      --gutter: 20px;
+      --r-panel: 24px;
+      --r-in: 18px;
+      --r-code: 16px;
+      --nav-h: 56px;
+    }
+    html[data-theme="light"] {
+      --bg: #f2f3f5;
+      --bg-2: #fbfbfc;
+      --ink: #17191c;
+      --muted: #5c636a;
+      --line: color-mix(in srgb, #17191c 8%, transparent);
+      --accent: #1f7a4d;
+      --accent-ink: #f4fff8;
+      --shadow: 0 28px 60px color-mix(in srgb, #17191c 8%, transparent);
+    }
+    @media (min-width: 768px) {
+      :root { --gutter: 32px; }
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: auto; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-h) + var(--s4) + env(safe-area-inset-top, 0px));
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
     body {
       margin: 0;
       background: var(--bg);
       color: var(--ink);
       font-family: var(--font);
       font-size: 16px;
-      line-height: 1.55;
+      font-weight: 450;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      text-wrap: pretty;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 8;
+      pointer-events: none;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
     }
 
-    a { color: var(--ink); }
-    code, pre { font-family: var(--mono); font-size: 0.92em; }
+    a { color: inherit; }
+    code, pre { font-family: var(--mono); font-size: 0.9em; font-variant-numeric: tabular-nums; }
     code {
-      background: var(--bg-2);
-      padding: 0.12em 0.35em;
-      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--ink) 6%, var(--bg-2));
+      padding: 0.12em 0.4em;
+      border-radius: 8px;
     }
     img { display: block; width: 100%; height: auto; }
     figure { margin: 0; }
+    h1, h2, h3 { text-wrap: balance; }
 
     .skip {
       position: absolute;
-      left: 12px;
-      top: -40px;
+      left: var(--s2);
+      top: -48px;
+      z-index: 20;
       background: var(--accent);
       color: var(--accent-ink);
-      padding: 8px 12px;
-      z-index: 20;
+      padding: var(--s1) var(--s2);
+      border-radius: 999px;
     }
-    .skip:focus { top: 12px; }
+    .skip:focus { top: var(--s2); }
 
-    .nav {
+    .nav-wrap {
       position: sticky;
-      top: 0;
+      top: max(var(--s3), env(safe-area-inset-top, 0px));
       z-index: 10;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
+      justify-content: center;
       padding: 0 var(--gutter);
-      background: color-mix(in srgb, var(--bg) 88%, transparent);
-      border-bottom: 1px solid var(--line);
     }
-    @supports not (background: color-mix(in srgb, black 50%, white)) {
-      .nav { background: var(--bg); }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: min(100%, var(--max));
+      min-height: var(--nav-h);
+      padding: 6px 6px 6px 18px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--bg) 72%, transparent);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(18px) saturate(140%);
+      -webkit-backdrop-filter: blur(18px) saturate(140%);
+    }
+    @media (prefers-reduced-transparency: reduce) {
+      .nav { background: var(--bg-2); backdrop-filter: none; }
     }
     .mark {
-      font-weight: 650;
+      flex: none;
+      font-weight: 600;
       letter-spacing: -0.03em;
       text-decoration: none;
+      border-radius: 8px;
     }
-    .nav nav {
-      display: flex;
-      gap: 22px;
+    .mark:focus-visible,
+    .nav-links a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      min-width: 0;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
       font-size: 14px;
+      font-weight: 500;
     }
-    .nav nav a { text-decoration: none; color: var(--muted); }
-    .nav nav a:hover, .nav nav a:focus-visible { color: var(--ink); }
-    .desk { display: none; }
-    @media (min-width: 768px) { .desk { display: inline; } }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a {
+      flex: none;
+      text-decoration: none;
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 6px 10px;
+      transition: color 0.28s var(--ease), background 0.28s var(--ease);
+    }
+    .nav-links a:hover { color: var(--ink); }
+    @media (min-width: 1024px) {
+      .nav-links { display: flex; }
+    }
+
+    .controls {
+      display: flex;
+      gap: 6px;
+      flex: none;
+      margin-left: auto;
+    }
+    .seg {
+      display: flex;
+      padding: 3px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--ink) 6%, transparent);
+    }
+    .seg button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      min-height: 32px;
+      padding: 0 11px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.28s var(--ease), color 0.28s var(--ease);
+      white-space: nowrap;
+    }
+    .seg button[aria-pressed="true"] {
+      background: var(--bg-2);
+      color: var(--ink);
+      box-shadow: 0 1px 0 color-mix(in srgb, var(--ink) 8%, transparent);
+    }
+    .seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    @media (max-width: 1023px) {
+      .nav { gap: 10px; padding-left: 16px; }
+    }
+    @media (max-width: 480px) {
+      .nav-wrap {
+        top: max(8px, env(safe-area-inset-top, 0px));
+        padding: 0 12px;
+      }
+      .nav { min-height: 52px; padding: 4px 4px 4px 14px; gap: 8px; }
+      .controls { gap: 4px; }
+      .seg { padding: 2px; }
+      .seg button { padding: 0 9px; font-size: 11px; min-height: 32px; }
+    }
+    @media (max-width: 360px) {
+      .mark { font-size: 15px; }
+      .seg button { padding: 0 7px; }
+    }
 
     main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 
     .hero {
       display: grid;
-      gap: 32px;
-      min-height: calc(100dvh - 64px);
-      padding-top: 28px;
-      padding-bottom: 48px;
+      gap: var(--s5);
+      padding-top: var(--s4);
+      padding-bottom: var(--s6);
       align-items: center;
+    }
+    @media (min-width: 900px) and (min-height: 720px) {
+      .hero { min-height: calc(100dvh - 88px); }
     }
     @media (min-width: 900px) {
       .hero {
-        grid-template-columns: 1fr 1.05fr;
-        gap: 56px;
-        padding-top: 36px;
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: var(--s7);
+        padding-top: var(--s5);
       }
     }
     h1 {
-      margin: 0 0 16px;
-      font-size: clamp(2.1rem, 5vw, 3.4rem);
-      line-height: 1.08;
-      letter-spacing: -0.045em;
-      font-weight: 650;
+      margin: 0 0 var(--s3);
+      font-size: clamp(2.15rem, 4.4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.042em;
+      font-weight: 600;
     }
     .lede {
-      margin: 0 0 28px;
-      max-width: 36ch;
+      margin: 0 0 var(--s5);
+      max-width: 38ch;
       color: var(--muted);
       font-size: 1.05rem;
+      line-height: 1.55;
     }
     .actions { display: flex; flex-wrap: wrap; gap: 10px; }
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 44px;
-      padding: 0 18px;
+      min-height: 48px;
+      padding: 0 8px 0 18px;
       border: 1px solid transparent;
-      border-radius: var(--radius);
+      border-radius: 999px;
       font: inherit;
       font-size: 15px;
       font-weight: 600;
       text-decoration: none;
       white-space: nowrap;
       cursor: pointer;
+      transition: transform 0.28s var(--ease), background 0.28s var(--ease), color 0.28s var(--ease);
     }
+    .btn.ghost { padding: 0 18px; }
     .btn.primary {
       background: var(--accent);
       color: var(--accent-ink);
@@ -152,237 +350,698 @@
       color: var(--ink);
       border-color: var(--line);
     }
+    .btn:hover { transform: translateY(-1px); }
     .btn:active { transform: scale(0.98); }
     .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
     .btn[data-state="copied"] { background: var(--ink); color: var(--bg); }
-    .btn[data-state="error"] { background: transparent; color: var(--ink); border-color: var(--ink); }
+    .btn[data-state="error"] {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+    .btn-orb {
+      width: 28px;
+      height: 28px;
+      margin-left: 10px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--accent-ink) 12%, transparent);
+      display: grid;
+      place-items: center;
+      transition: transform 0.28s var(--ease);
+    }
+    .btn.primary:hover .btn-orb { transform: translate(1px, -1px) scale(1.05); }
+    .btn-orb::after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-right: 1.5px solid currentColor;
+      border-top: 1.5px solid currentColor;
+      transform: rotate(45deg) translate(-1px, 0);
+    }
+    .btn.compact {
+      min-height: 44px;
+      padding: 0 16px;
+      font-size: 14px;
+    }
 
-    .hero-fig img { aspect-ratio: 3 / 2; object-fit: cover; }
+    .bezel {
+      padding: 6px;
+      border-radius: 28px;
+      background: color-mix(in srgb, var(--ink) 5%, transparent);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .bezel-in {
+      border-radius: calc(28px - 6px);
+      overflow: hidden;
+    }
+    .bezel img { aspect-ratio: 3 / 2; object-fit: cover; }
 
     h2 {
-      margin: 0 0 12px;
-      font-size: clamp(1.6rem, 3vw, 2rem);
-      letter-spacing: -0.035em;
-      line-height: 1.15;
+      margin: 0 0 var(--s2);
+      font-size: clamp(1.55rem, 2.6vw, 1.95rem);
+      letter-spacing: -0.032em;
+      line-height: 1.2;
+      font-weight: 600;
     }
-    .body { margin: 0 0 16px; max-width: 62ch; color: var(--muted); }
-    .note { margin: 20px 0 0; color: var(--muted); font-size: 0.95rem; max-width: 70ch; }
+    .body { margin: 0 0 var(--s3); max-width: 62ch; color: var(--muted); }
+    .note { margin: var(--s4) 0 0; color: var(--muted); font-size: 0.95rem; max-width: 70ch; }
+    .note + .panel { margin-top: var(--s3); }
 
-    .source, .ship, .tap, .log, .ssh { padding: 72px 0; }
-    .source { border-top: 1px solid var(--line); }
+    .source, .ship, .tap, .log, .ssh {
+      padding: var(--s7) 0 var(--s8);
+    }
+    @media (min-width: 768px) {
+      .source, .ship, .tap, .log, .ssh { padding: var(--s8) 0 112px; }
+    }
 
-    .url, .cmd {
-      margin: 24px 0 0;
-      padding: 20px;
+    .panel {
+      margin-top: var(--s4);
+      padding: var(--s4);
+      border-radius: var(--r-code);
       background: var(--bg-2);
       border: 1px solid var(--line);
+      box-shadow: inset 0 1px 0 color-mix(in srgb, var(--ink) 8%, transparent);
+    }
+    .url, .cmd {
+      margin: 0;
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       white-space: pre;
       color: var(--ink);
+      font-size: 0.92rem;
+    }
+    .source-board {
+      display: grid;
+      gap: var(--s5);
+      margin-top: var(--s4);
+    }
+    @media (min-width: 860px) {
+      .source-board {
+        grid-template-columns: 1.12fr 0.88fr;
+        gap: var(--s6);
+        align-items: start;
+      }
+    }
+    .source-board .panel { margin-top: 0; }
+    .copy-panel {
+      display: grid;
+      gap: var(--s3);
+    }
+    .copy-panel .btn.compact { width: 100%; }
+    @media (min-width: 640px) {
+      .copy-panel {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+      }
+      .copy-panel .btn.compact { width: auto; }
+    }
+    .copy-panel .url,
+    .copy-panel .cmd {
+      user-select: all;
+      -webkit-user-select: all;
+      cursor: pointer;
+      min-width: 0;
+    }
+    .hint {
+      margin: var(--s3) 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      max-width: 52ch;
+    }
+    .sileo-how {
+      display: grid;
+      gap: var(--s4);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    @media (min-width: 560px) and (max-width: 859px) {
+      .sileo-how { grid-template-columns: 1fr 1fr; }
+    }
+    .sileo-how li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+    .sileo-how .n {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      margin-top: 1px;
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--accent) 16%, var(--bg-2));
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .sileo-how strong {
+      display: block;
+      font-size: 0.98rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .sileo-how p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      max-width: 36ch;
     }
 
     .meta {
       display: grid;
-      gap: 20px;
-      margin: 28px 0 0;
+      gap: var(--s4);
+      margin-top: var(--s5);
     }
     @media (min-width: 700px) {
       .meta { grid-template-columns: repeat(3, 1fr); }
     }
-    .meta dt { color: var(--muted); font-size: 13px; margin-bottom: 4px; }
-    .meta dd { margin: 0; font-family: var(--mono); font-size: 14px; }
+    .meta dt {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .meta dd {
+      margin: 0;
+      font-family: var(--mono);
+      font-size: 14px;
+    }
 
-    .ship {
+    .ship, .tap {
       display: grid;
-      gap: 28px;
+      gap: var(--s5);
       align-items: center;
     }
     @media (min-width: 860px) {
-      .ship { grid-template-columns: 1.15fr 0.85fr; gap: 48px; }
-    }
-    .ship-fig img, .tap-fig img { aspect-ratio: 3 / 2; object-fit: cover; }
-
-    .caption {
-      margin: 14px 0 0;
-      color: var(--muted);
-      max-width: 68ch;
+      .ship, .tap {
+        grid-template-columns: 1.12fr 0.88fr;
+        gap: var(--s7);
+      }
+      .ship .bezel { order: -1; }
     }
 
     .log-grid {
       display: grid;
-      gap: 20px;
-      margin-top: 28px;
+      gap: var(--s4);
+      margin-top: var(--s5);
     }
     @media (min-width: 860px) {
       .log-grid {
-        grid-template-columns: 1.4fr 1fr;
+        grid-template-columns: 1.35fr 1fr;
         grid-template-rows: auto auto;
       }
       .log-now { grid-row: 1 / span 2; }
     }
-    .log-grid article { padding: 8px 0; }
-    .log-now { background: var(--bg-2); padding: 28px; border: 1px solid var(--line); }
+    .log-grid article:not(.log-now) { padding: var(--s1) 0; }
+    .log-now {
+      padding: var(--s5);
+      border-radius: var(--r-panel);
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+      box-shadow: inset 0 1px 0 color-mix(in srgb, var(--ink) 8%, transparent);
+    }
     .log-grid h3 {
-      margin: 0 0 8px;
+      margin: 0 0 var(--s1);
       font-family: var(--mono);
       font-size: 13px;
       font-weight: 600;
       color: var(--accent);
     }
-    .log-now h3 { font-size: 22px; letter-spacing: -0.03em; font-family: var(--font); color: var(--ink); }
+    .log-now h3 {
+      font-size: 1.65rem;
+      letter-spacing: -0.03em;
+      font-family: var(--font);
+      color: var(--ink);
+    }
     .log-grid p { margin: 0; color: var(--muted); }
 
     .foot {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 32px var(--gutter) 56px;
+      padding: var(--s6) var(--gutter) max(var(--s7), calc(var(--s5) + env(safe-area-inset-bottom, 0px)));
       border-top: 1px solid var(--line);
+    }
+    .foot-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px 24px;
+    }
+    .foot-brand {
+      color: var(--ink);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    .foot-row a.ext {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.28s var(--ease);
+    }
+    .foot-row a.ext:hover,
+    .foot-row a.ext:focus-visible,
+    .foot-brand:hover,
+    .foot-brand:focus-visible { color: var(--ink); }
+    .foot-row a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .foot p {
+      margin: 10px 0 0;
       color: var(--muted);
       font-size: 0.92rem;
+      max-width: 62ch;
     }
-    .foot p { margin: 0 0 8px; max-width: 70ch; }
 
     .reveal { opacity: 1; transform: none; }
     @media (prefers-reduced-motion: no-preference) {
       .reveal.is-pending {
         opacity: 0;
-        transform: translateY(14px);
+        transform: translateY(16px);
       }
       .reveal.is-in {
         opacity: 1;
         transform: none;
-        transition: opacity 0.55s ease, transform 0.55s ease;
+        transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
       }
-    }
-
-    @media (prefers-reduced-transparency: reduce) {
-      .nav { background: var(--bg); }
     }
   </style>
 </head>
 <body>
-  <a class="skip" href="#main">Tới nội dung</a>
+  <a class="skip" href="#main" data-i18n="skip">Tới nội dung</a>
 
-  <header class="nav">
-    <a class="mark" href="#top">AutoIOS</a>
-    <nav aria-label="Mục lục">
-      <a href="#source">Nguồn</a>
-      <a class="desk" href="#ship">Gói</a>
-      <a class="desk" href="#log">Nhật ký</a>
-      <a href="#ssh">SSH</a>
-    </nav>
-  </header>
+  <div class="nav-wrap">
+    <header class="nav">
+      <a class="mark" href="#top">AutoIOS</a>
+      <nav class="nav-links" data-i18n-aria="navAria" aria-label="Mục lục">
+        <a href="#source" data-i18n="navSource">Nguồn</a>
+        <a href="#ship" data-i18n="navShip">IDE</a>
+        <a href="#log" data-i18n="navLog">Nhật ký</a>
+        <a href="#ssh" data-i18n="navSsh">SSH</a>
+      </nav>
+      <div class="controls">
+        <div class="seg" role="group" data-i18n-aria="langAria" aria-label="Ngôn ngữ">
+          <button type="button" data-lang="vi" aria-pressed="true">VI</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <div class="seg" role="group" data-i18n-aria="themeAria" aria-label="Giao diện">
+          <button type="button" data-theme-set="light" aria-pressed="false" data-i18n="themeLight">Sáng</button>
+          <button type="button" data-theme-set="dark" aria-pressed="true" data-i18n="themeDark">Tối</button>
+        </div>
+      </div>
+    </header>
+  </div>
 
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-copy">
-        <h1>Nguồn AutoIOS<br>cho Sileo.</h1>
-        <p class="lede">Cài tweak từ GitHub raw. Chạm màn hình qua TrollVNC. Viết Lua trên Web IDE cùng Wi-Fi.</p>
+        <h1 data-i18n-html="heroTitle">Nguồn AutoIOS<br>cho Sileo.</h1>
+        <p class="lede" data-i18n="heroLede">Cài tweak từ GitHub raw. Chạm màn hình qua TrollVNC. Viết Lua trên Web IDE cùng Wi-Fi.</p>
         <div class="actions">
-          <button type="button" class="btn primary" id="copy-source" data-copy="https://raw.githubusercontent.com/manhvip/autoios-repo/main/">Sao chép nguồn</button>
-          <a class="btn ghost" href="#ssh">Cài SSH</a>
+          <button type="button" class="btn primary" id="copy-source">
+            <span id="copy-label" data-i18n="ctaCopy">Sao chép nguồn</span>
+            <span class="btn-orb" aria-hidden="true"></span>
+          </button>
+          <a class="btn ghost" href="#ssh" data-i18n="ctaSsh">Cài SSH</a>
         </div>
       </div>
-      <figure class="hero-fig">
-        <img src="wiki/hero.jpg" width="1536" height="1024" alt="iPhone trên bàn kim loại tối, đèn trạng thái xanh phosphor trên dock">
-      </figure>
+      <div class="bezel">
+        <figure class="bezel-in">
+          <img src="wiki/hero.jpg" width="1536" height="1024" fetchpriority="high" decoding="async" data-i18n-alt="heroAlt" alt="iPhone trên bàn kim loại tối, đèn trạng thái xanh phosphor trên dock">
+        </figure>
+      </div>
     </section>
 
     <section class="source reveal" id="source">
-      <h2>Thêm nguồn trong Sileo</h2>
-      <p class="body">Dùng raw.githubusercontent. Ít cache hơn github.io, tránh lỗi hash Packages khi Refresh.</p>
-      <pre class="url" tabindex="0">https://raw.githubusercontent.com/manhvip/autoios-repo/main/</pre>
+      <h2 data-i18n="sourceTitle">Thêm nguồn trong Sileo</h2>
+      <p class="body" data-i18n="sourceBody">Dùng raw.githubusercontent. Ít cache hơn github.io, tránh lỗi hash Packages khi Refresh.</p>
+      <div class="source-board">
+        <div class="source-copy">
+          <div class="panel copy-panel">
+            <pre class="url" id="source-url" tabindex="0">https://raw.githubusercontent.com/manhvip/autoios-repo/main/</pre>
+            <button type="button" class="btn compact primary" data-copy="source" data-idle="ctaCopyShort" data-i18n-aria="ctaCopy" aria-label="Sao chép nguồn" aria-describedby="source-hint" aria-live="polite">
+              <span data-i18n="ctaCopyShort">Sao chép</span>
+            </button>
+          </div>
+          <p class="hint" id="source-hint" data-i18n="sourceHint">Chạm URL hoặc nút Sao chép. Dán vào Sileo, Sources, dấu +.</p>
+        </div>
+        <ol class="sileo-how">
+          <li>
+            <span class="n" aria-hidden="true">1</span>
+            <div>
+              <strong data-i18n="sileo1t">Mở Sources</strong>
+              <p data-i18n="sileo1b">Mở Sileo, vào Sources, bấm dấu + góc trên.</p>
+            </div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">2</span>
+            <div>
+              <strong data-i18n="sileo2t">Dán URL</strong>
+              <p data-i18n="sileo2b">Dán nguồn vừa copy, rồi bấm Add Source.</p>
+            </div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">3</span>
+            <div>
+              <strong data-i18n="sileo3t">Refresh</strong>
+              <p data-i18n="sileo3b">Kéo xuống Refresh. Đợi nguồn AutoIOS hiện trong danh sách.</p>
+            </div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">4</span>
+            <div>
+              <strong data-i18n="sileo4t">Cài gói</strong>
+              <p data-i18n="sileo4b">Search AutoIOS hoặc mở nguồn, cài com.manhvip.autoios.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
       <dl class="meta">
         <div>
-          <dt>Gói</dt>
+          <dt data-i18n="metaPkg">Gói</dt>
           <dd>com.manhvip.autoios</dd>
         </div>
         <div>
-          <dt>Hiện tại</dt>
+          <dt data-i18n="metaNow">Hiện tại</dt>
           <dd>0.4.20 - iphoneos-arm64</dd>
         </div>
         <div>
-          <dt>Yêu cầu</dt>
-          <dd>iOS 14+, MobileSubstrate</dd>
+          <dt data-i18n="metaNeed">Yêu cầu</dt>
+          <dd data-i18n="metaNeedVal">iOS 14+, MobileSubstrate</dd>
         </div>
       </dl>
-      <p class="note">Không thêm <code>https://manhvip.github.io/autoios-repo/</code> vào Sileo. Trang đó chỉ là wiki. Backup CDN: <code>https://cdn.jsdelivr.net/gh/manhvip/autoios-repo@main/</code></p>
+      <p class="note" data-i18n-html="sourceNote">Không thêm <code>https://manhvip.github.io/autoios-repo/</code> vào Sileo. Trang đó chỉ là wiki. CDN dự phòng:</p>
+      <div class="panel copy-panel">
+        <pre class="url" id="cdn-url" tabindex="0">https://cdn.jsdelivr.net/gh/manhvip/autoios-repo@main/</pre>
+        <button type="button" class="btn compact ghost" data-copy="cdn" data-idle="ctaCopyCdn" data-i18n-aria="ctaCopyCdnAria" aria-label="Sao chép CDN" aria-live="polite">
+          <span data-i18n="ctaCopyCdn">Sao chép CDN</span>
+        </button>
+      </div>
     </section>
 
     <section class="ship reveal" id="ship">
-      <figure class="ship-fig">
-        <img src="wiki/lan.jpg" width="1536" height="1024" alt="iPhone dựng trên dock cạnh laptop đóng, cùng một bàn tối">
-      </figure>
       <div class="ship-copy">
-        <h2>Web IDE trên LAN</h2>
-        <p class="body">Sau khi cài, bật LAN trong Settings. Trình duyệt cùng Wi-Fi mở <code>http://&lt;ip&gt;:2000</code> kèm token 8 ký tự. App 0.4.14 trở lên mở đúng IP máy, không cần gõ URL.</p>
-        <p class="body">Token nằm trong Settings và <code>/var/jb/etc/autoios/token</code>. API trừ <code>GET /api/status</code> cần <code>Authorization: Bearer</code>.</p>
+        <h2 data-i18n="shipTitle">Web IDE trên LAN</h2>
+        <p class="body">
+          <span data-i18n="ship1a">Sau khi cài, bật LAN trong Settings. Trình duyệt cùng Wi-Fi mở</span>
+          <code>http://&lt;ip&gt;:2000</code>
+          <span data-i18n="ship1b">kèm token 8 ký tự. App 0.4.14 trở lên mở đúng IP máy, không cần gõ URL.</span>
+        </p>
+        <p class="body">
+          <span data-i18n="ship2a">Token nằm trong Settings và</span>
+          <code>/var/jb/etc/autoios/token</code>.
+          <span data-i18n="ship2b">API trừ</span>
+          <code>GET /api/status</code>
+          <span data-i18n="ship2c">cần</span>
+          <code>Authorization: Bearer</code>.
+        </p>
+      </div>
+      <div class="bezel">
+        <figure class="bezel-in">
+          <img src="wiki/lan.jpg" width="1536" height="1024" loading="lazy" decoding="async" data-i18n-alt="lanAlt" alt="iPhone dựng trên dock cạnh laptop đóng, cùng một bàn tối">
+        </figure>
       </div>
     </section>
 
     <section class="tap reveal" id="tap">
-      <figure class="tap-fig">
-        <img src="wiki/tap.jpg" width="1536" height="1024" alt="Ngón cái chạm màn hình iPhone trong phòng tối, viền máy sáng xanh phosphor">
-      </figure>
-      <p class="caption">Chạm trong View đi qua TrollVNC RFB, cùng đường với click. Không BKHID, không IOHID. VNC: cổng 5902, mật khẩu là 8 ký tự đầu của token.</p>
+      <div class="tap-copy">
+        <h2 data-i18n="tapTitle">Chạm qua TrollVNC</h2>
+        <p class="body" data-i18n="tapCaption">Chạm trong View đi qua TrollVNC RFB, cùng đường với click. Không BKHID, không IOHID. VNC: cổng 5902, mật khẩu là 8 ký tự đầu của token.</p>
+      </div>
+      <div class="bezel">
+        <figure class="bezel-in">
+          <img src="wiki/tap.jpg" width="1536" height="1024" loading="lazy" decoding="async" data-i18n-alt="tapAlt" alt="Ngón cái chạm màn hình iPhone trong phòng tối, viền máy sáng xanh phosphor">
+        </figure>
+      </div>
     </section>
 
     <section class="log reveal" id="log">
-      <h2>Nhật ký gần đây</h2>
+      <h2 data-i18n="logTitle">Nhật ký gần đây</h2>
       <div class="log-grid">
         <article class="log-now">
           <h3>0.4.20</h3>
-          <p>Home bằng nút menu TrollVNC. Wait Text / Tap Text OCR hết cgimage-fail.</p>
+          <p data-i18n="log20">Home bằng nút menu TrollVNC. Wait Text / Tap Text OCR hết cgimage-fail.</p>
         </article>
         <article>
           <h3>0.4.19</h3>
-          <p>Settings mở popup. Flow Builder có node End và canvas hình tròn.</p>
+          <p data-i18n="log19">Settings mở popup. Flow Builder có node End và canvas hình tròn.</p>
         </article>
         <article>
-          <h3>Lua và HID</h3>
-          <p>0.4.16 pinch/rotate, frontMostAppId, typeKeys. 0.4.15 hoàn tất API Lua còn lại. 0.4.12 execute, appKill, proxy, vibrate, keepAwake.</p>
+          <h3 data-i18n="logLua">Lua và HID</h3>
+          <p data-i18n="logLuaBody">0.4.16 pinch/rotate, frontMostAppId, typeKeys. 0.4.15 hoàn tất API Lua còn lại. 0.4.12 execute, appKill, proxy, vibrate, keepAwake.</p>
         </article>
       </div>
     </section>
 
     <section class="ssh reveal" id="ssh">
-      <h2>Cài bằng SSH</h2>
-      <p class="body">Không cần Sileo. Chạy trên máy đã jailbreak, user root.</p>
-      <pre class="cmd" tabindex="0">curl -L https://raw.githubusercontent.com/manhvip/autoios-repo/main/debs/install-autoios.sh | sh</pre>
-      <p class="note">Script gỡ <code>com.manhvip.autoios-vnc</code> nếu còn, rồi cài <code>debs/autoios-latest.deb</code>. Script Lua lưu tại <code>/var/mobile/Documents/autoios</code>.</p>
+      <h2 data-i18n="sshTitle">Cài bằng SSH</h2>
+      <p class="body" data-i18n="sshBody">Không cần Sileo. Chạy trên máy đã jailbreak, user root.</p>
+      <div class="panel copy-panel">
+        <pre class="cmd" id="ssh-cmd" tabindex="0">curl -L https://raw.githubusercontent.com/manhvip/autoios-repo/main/debs/install-autoios.sh | sh</pre>
+        <button type="button" class="btn compact primary" data-copy="ssh" data-idle="ctaCopyShort" data-i18n-aria="ctaCopySshAria" aria-label="Sao chép lệnh SSH" aria-live="polite">
+          <span data-i18n="ctaCopyShort">Sao chép</span>
+        </button>
+      </div>
+      <p class="note">
+        <span data-i18n="sshNoteA">Script gỡ</span>
+        <code>com.manhvip.autoios-vnc</code>
+        <span data-i18n="sshNoteB">nếu còn, rồi cài</span>
+        <code>debs/autoios-latest.deb</code>.
+        <span data-i18n="sshNoteC">Script Lua lưu tại</span>
+        <code>/var/mobile/Documents/autoios</code>.
+      </p>
     </section>
   </main>
 
   <footer class="foot">
-    <p>Phần mềm độc quyền. Gói kèm TrollVNC (GPL-2.0) và noVNC.</p>
-    <p>Apt metadata ở root: <code>Release</code>, <code>Packages</code>, <code>Packages.gz</code>. Wiki không đụng các file đó.</p>
+    <div class="foot-row">
+      <a href="#top" class="foot-brand">AutoIOS</a>
+      <a href="https://github.com/manhvip/autoios-repo" class="ext" rel="noreferrer">GitHub</a>
+    </div>
+    <p data-i18n="foot1">© 2026 Mạnh VIP. Phần mềm độc quyền. Gói kèm TrollVNC (GPL-2.0) và noVNC.</p>
   </footer>
 
   <script>
     (function () {
       var SOURCE = "https://raw.githubusercontent.com/manhvip/autoios-repo/main/";
-      var btn = document.getElementById("copy-source");
-      var idle = "Sao chép nguồn";
+      var CDN = "https://cdn.jsdelivr.net/gh/manhvip/autoios-repo@main/";
+      var SSH = "curl -L https://raw.githubusercontent.com/manhvip/autoios-repo/main/debs/install-autoios.sh | sh";
+      var I18N = {
+        vi: {
+          title: "AutoIOS - Nguồn Sileo",
+          desc: "Nguồn apt AutoIOS cho Sileo. Cài tweak jailbreak, chạm màn hình qua TrollVNC, viết Lua trên Web IDE.",
+          skip: "Tới nội dung",
+          navAria: "Mục lục",
+          langAria: "Ngôn ngữ",
+          themeAria: "Giao diện",
+          navSource: "Nguồn",
+          navShip: "IDE",
+          navLog: "Nhật ký",
+          navSsh: "SSH",
+          themeLight: "Sáng",
+          themeDark: "Tối",
+          heroTitle: "Nguồn AutoIOS<br>cho Sileo.",
+          heroLede: "Cài tweak từ GitHub raw. Chạm màn hình qua TrollVNC. Viết Lua trên Web IDE cùng Wi-Fi.",
+          ctaCopy: "Sao chép nguồn",
+          ctaCopied: "Đã sao chép",
+          ctaCopyFail: "Không sao chép được",
+          ctaCopyShort: "Sao chép",
+          ctaSsh: "Cài SSH",
+          heroAlt: "iPhone trên bàn kim loại tối, đèn trạng thái xanh phosphor trên dock",
+          sourceTitle: "Thêm nguồn trong Sileo",
+          sourceBody: "Dùng raw.githubusercontent. Ít cache hơn github.io, tránh lỗi hash Packages khi Refresh.",
+          sourceHint: "Chạm URL hoặc nút Sao chép. Dán vào Sileo, Sources, dấu +.",
+          sileo1t: "Mở Sources",
+          sileo1b: "Mở Sileo, vào Sources, bấm dấu + góc trên.",
+          sileo2t: "Dán URL",
+          sileo2b: "Dán nguồn vừa copy, rồi bấm Add Source.",
+          sileo3t: "Refresh",
+          sileo3b: "Kéo xuống Refresh. Đợi nguồn AutoIOS hiện trong danh sách.",
+          sileo4t: "Cài gói",
+          sileo4b: "Search AutoIOS hoặc mở nguồn, cài com.manhvip.autoios.",
+          ctaCopyCdn: "Sao chép CDN",
+          ctaCopyCdnAria: "Sao chép CDN",
+          ctaCopySshAria: "Sao chép lệnh SSH",
+          metaPkg: "Gói",
+          metaNow: "Hiện tại",
+          metaNeed: "Yêu cầu",
+          metaNeedVal: "iOS 14+, MobileSubstrate",
+          sourceNote: "Không thêm <code>https://manhvip.github.io/autoios-repo/</code> vào Sileo. Trang đó chỉ là wiki. CDN dự phòng:",
+          shipTitle: "Web IDE trên LAN",
+          ship1a: "Sau khi cài, bật LAN trong Settings. Trình duyệt cùng Wi-Fi mở",
+          ship1b: "kèm token 8 ký tự. App 0.4.14 trở lên mở đúng IP máy, không cần gõ URL.",
+          ship2a: "Token nằm trong Settings và",
+          ship2b: "API trừ",
+          ship2c: "cần",
+          lanAlt: "iPhone dựng trên dock cạnh laptop đóng, cùng một bàn tối",
+          tapTitle: "Chạm qua TrollVNC",
+          tapAlt: "Ngón cái chạm màn hình iPhone trong phòng tối, viền máy sáng xanh phosphor",
+          tapCaption: "Chạm trong View đi qua TrollVNC RFB, cùng đường với click. Không BKHID, không IOHID. VNC: cổng 5902, mật khẩu là 8 ký tự đầu của token.",
+          logTitle: "Nhật ký gần đây",
+          log20: "Home bằng nút menu TrollVNC. Wait Text / Tap Text OCR hết cgimage-fail.",
+          log19: "Settings mở popup. Flow Builder có node End và canvas hình tròn.",
+          logLua: "Lua và HID",
+          logLuaBody: "0.4.16 pinch/rotate, frontMostAppId, typeKeys. 0.4.15 hoàn tất API Lua còn lại. 0.4.12 execute, appKill, proxy, vibrate, keepAwake.",
+          sshTitle: "Cài bằng SSH",
+          sshBody: "Không cần Sileo. Chạy trên máy đã jailbreak, user root.",
+          sshNoteA: "Script gỡ",
+          sshNoteB: "nếu còn, rồi cài",
+          sshNoteC: "Script Lua lưu tại",
+          foot1: "© 2026 Mạnh VIP. Phần mềm độc quyền. Gói kèm TrollVNC (GPL-2.0) và noVNC."
+        },
+        en: {
+          title: "AutoIOS - Sileo source",
+          desc: "AutoIOS apt source for Sileo. Install the jailbreak tweak, tap the screen over TrollVNC, and write Lua in the Web IDE.",
+          skip: "Skip to content",
+          navAria: "On this page",
+          langAria: "Language",
+          themeAria: "Appearance",
+          navSource: "Source",
+          navShip: "IDE",
+          navLog: "Log",
+          navSsh: "SSH",
+          themeLight: "Light",
+          themeDark: "Dark",
+          heroTitle: "The AutoIOS source<br>for Sileo.",
+          heroLede: "Install the tweak from GitHub raw. Tap the screen over TrollVNC. Write Lua in the LAN Web IDE.",
+          ctaCopy: "Copy source",
+          ctaCopied: "Copied",
+          ctaCopyFail: "Could not copy",
+          ctaCopyShort: "Copy",
+          ctaSsh: "SSH install",
+          heroAlt: "iPhone on a dark metal desk with a phosphor-green status light on the dock",
+          sourceTitle: "Add the source in Sileo",
+          sourceBody: "Use raw.githubusercontent. It caches less than github.io and avoids Packages hash errors on Refresh.",
+          sourceHint: "Tap the URL or Copy. Paste it in Sileo, Sources, then +.",
+          sileo1t: "Open Sources",
+          sileo1b: "Open Sileo, go to Sources, tap + at the top.",
+          sileo2t: "Paste the URL",
+          sileo2b: "Paste the copied source, then tap Add Source.",
+          sileo3t: "Refresh",
+          sileo3b: "Pull to Refresh. Wait until AutoIOS appears in the list.",
+          sileo4t: "Install",
+          sileo4b: "Search AutoIOS or open the source, then install com.manhvip.autoios.",
+          ctaCopyCdn: "Copy CDN",
+          ctaCopyCdnAria: "Copy CDN",
+          ctaCopySshAria: "Copy SSH command",
+          metaPkg: "Package",
+          metaNow: "Current",
+          metaNeed: "Requires",
+          metaNeedVal: "iOS 14+, MobileSubstrate",
+          sourceNote: "Do not add <code>https://manhvip.github.io/autoios-repo/</code> in Sileo. That URL is the wiki only. CDN backup:",
+          shipTitle: "Web IDE on the LAN",
+          ship1a: "After install, turn on LAN in Settings. On the same Wi-Fi, open",
+          ship1b: "with the 8-character token. From 0.4.14 the app opens the phone IP, so you do not type a URL.",
+          ship2a: "The token lives in Settings and",
+          ship2b: "Every API except",
+          ship2c: "needs",
+          lanAlt: "iPhone standing in a dock beside a closed laptop on the same dark desk",
+          tapTitle: "Taps over TrollVNC",
+          tapAlt: "A thumb tapping an iPhone screen in a dark room, phosphor-green rim light on the frame",
+          tapCaption: "A tap in View travels over TrollVNC RFB, the same path as a click. No BKHID, no IOHID. VNC port 5902. The password is the first 8 characters of the token.",
+          logTitle: "Recent log",
+          log20: "Home from the TrollVNC menu button. Wait Text and Tap Text OCR no longer fail on CGImage.",
+          log19: "Settings opens as a popup. Flow Builder adds an End node and a circular canvas.",
+          logLua: "Lua and HID",
+          logLuaBody: "0.4.16 pinch/rotate, frontMostAppId, typeKeys. 0.4.15 finishes the remaining Lua APIs. 0.4.12 execute, appKill, proxy, vibrate, keepAwake.",
+          sshTitle: "Install over SSH",
+          sshBody: "Sileo is optional. Run this as root on a jailbroken device.",
+          sshNoteA: "The script removes",
+          sshNoteB: "if it is still installed, then installs",
+          sshNoteC: "Lua scripts live at",
+          foot1: "© 2026 Mạnh VIP. Proprietary software. The package ships TrollVNC (GPL-2.0) and noVNC."
+        }
+      };
 
-      function setState(state, label) {
-        btn.dataset.state = state || "";
-        btn.textContent = label;
+      var root = document.documentElement;
+      var copyBtn = document.getElementById("copy-source");
+      var copyLabel = document.getElementById("copy-label");
+      var themeColor = document.querySelector('meta[name="theme-color"]');
+      var descMeta = document.querySelector('meta[name="description"]');
+
+      function dict() {
+        return I18N[root.getAttribute("data-lang") === "en" ? "en" : "vi"];
       }
 
-      btn.addEventListener("click", function () {
-        var done = function () { setState("copied", "Đã sao chép"); };
-        var fail = function () { setState("error", "Không sao chép được"); };
-        var reset = function () {
-          window.setTimeout(function () { setState("", idle); }, 1600);
-        };
+      function applyLang(lang) {
+        root.setAttribute("data-lang", lang);
+        root.setAttribute("lang", lang === "en" ? "en" : "vi");
+        try { localStorage.setItem("autoios-lang", lang); } catch (e) {}
+        var t = I18N[lang];
+        document.title = t.title;
+        if (descMeta) descMeta.setAttribute("content", t.desc);
+        document.querySelectorAll("[data-i18n]").forEach(function (el) {
+          var key = el.getAttribute("data-i18n");
+          if (t[key]) el.textContent = t[key];
+        });
+        document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+          var key = el.getAttribute("data-i18n-html");
+          if (t[key]) el.innerHTML = t[key];
+        });
+        document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+          var key = el.getAttribute("data-i18n-alt");
+          if (t[key]) el.setAttribute("alt", t[key]);
+        });
+        document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+          var key = el.getAttribute("data-i18n-aria");
+          if (t[key]) el.setAttribute("aria-label", t[key]);
+        });
+        document.querySelectorAll("button[data-lang]").forEach(function (el) {
+          el.setAttribute("aria-pressed", el.getAttribute("data-lang") === lang ? "true" : "false");
+        });
+        if (copyBtn) copyBtn.dataset.state = "";
+        document.querySelectorAll("[data-copy]").forEach(function (el) {
+          el.dataset.state = "";
+        });
+      }
 
+      function applyTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        root.style.colorScheme = theme;
+        try { localStorage.setItem("autoios-theme", theme); } catch (e) {}
+        if (themeColor) themeColor.setAttribute("content", theme === "light" ? "#f2f3f5" : "#121416");
+        document.querySelectorAll("[data-theme-set]").forEach(function (el) {
+          el.setAttribute("aria-pressed", el.getAttribute("data-theme-set") === theme ? "true" : "false");
+        });
+      }
+
+      applyLang(root.getAttribute("data-lang") === "en" ? "en" : "vi");
+      applyTheme(root.getAttribute("data-theme") === "light" ? "light" : "dark");
+
+      document.querySelectorAll("button[data-lang]").forEach(function (el) {
+        el.addEventListener("click", function () { applyLang(el.getAttribute("data-lang")); });
+      });
+      document.querySelectorAll("[data-theme-set]").forEach(function (el) {
+        el.addEventListener("click", function () { applyTheme(el.getAttribute("data-theme-set")); });
+      });
+
+      function copyText(text, btn, labelEl, idleKey) {
+        var t = dict();
+        var done = function () {
+          if (btn) btn.dataset.state = "copied";
+          if (labelEl) labelEl.textContent = t.ctaCopied;
+        };
+        var fail = function () {
+          if (btn) btn.dataset.state = "error";
+          if (labelEl) labelEl.textContent = t.ctaCopyFail;
+        };
+        var reset = function () {
+          window.setTimeout(function () {
+            if (btn) btn.dataset.state = "";
+            if (labelEl) labelEl.textContent = dict()[idleKey] || dict().ctaCopy;
+          }, 1600);
+        };
         if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(SOURCE).then(done, fail).then(reset);
+          navigator.clipboard.writeText(text).then(done, fail).then(reset);
           return;
         }
-
         var area = document.createElement("textarea");
-        area.value = SOURCE;
+        area.value = text;
         area.setAttribute("readonly", "");
         area.style.position = "fixed";
         area.style.left = "-9999px";
@@ -391,28 +1050,61 @@
         try {
           if (document.execCommand("copy")) done();
           else fail();
-        } catch (e) {
-          fail();
-        }
+        } catch (e) { fail(); }
         document.body.removeChild(area);
         reset();
+      }
+
+      if (copyBtn) {
+        copyBtn.addEventListener("click", function () {
+          copyText(SOURCE, copyBtn, copyLabel, "ctaCopy");
+        });
+      }
+
+      document.querySelectorAll("[data-copy]").forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          var kind = btn.getAttribute("data-copy");
+          var text = kind === "cdn" ? CDN : kind === "ssh" ? SSH : SOURCE;
+          var label = btn.querySelector("[data-i18n]") || btn;
+          var idle = btn.getAttribute("data-idle") || "ctaCopyShort";
+          copyText(text, btn, label, idle);
+        });
       });
+
+      function bindCopySurface(id, kind) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        var trigger = function () {
+          var btn = document.querySelector('[data-copy="' + kind + '"]');
+          if (btn) btn.click();
+        };
+        el.addEventListener("click", trigger);
+        el.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            trigger();
+          }
+        });
+      }
+      bindCopySurface("source-url", "source");
+      bindCopySurface("cdn-url", "cdn");
+      bindCopySurface("ssh-cmd", "ssh");
 
       var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       var nodes = document.querySelectorAll(".reveal");
-      if (reduce || !("IntersectionObserver" in window)) {
-        return;
+      if (!reduce && "IntersectionObserver" in window) {
+        nodes.forEach(function (el) { el.classList.add("is-pending"); });
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.remove("is-pending");
+            entry.target.classList.add("is-in");
+            io.unobserve(entry.target);
+          });
+        }, { threshold: 0.12 });
+        nodes.forEach(function (el) { io.observe(el); });
       }
-      nodes.forEach(function (el) { el.classList.add("is-pending"); });
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.remove("is-pending");
-          entry.target.classList.add("is-in");
-          io.unobserve(entry.target);
-        });
-      }, { threshold: 0.14 });
-      nodes.forEach(function (el) { io.observe(el); });
     })();
   </script>
 </body>
