@@ -6,3 +6,6 @@ index.html text eol=lf
 debs/*.deb binary
 Packages.gz binary
 Packages.bz2 binary
+wiki/*.jpg binary
+wiki/*.jpeg binary
+wiki/*.png binary
