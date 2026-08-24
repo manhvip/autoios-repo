@@ -6,10 +6,10 @@ Codename: autoios
 Architectures: iphoneos-arm64
 Components: main
 Description: autoios jailbreak automation packages
-Date: Mon, 24 Aug 2026 13:27:34 UTC
+Date: Mon, 24 Aug 2026 15:06:20 UTC
 MD5Sum:
- 618f42f3a791bf62ba1962f2596de650              617 Packages
- 9be4d5f0673e2b25ce056fb3ee7bdbf1              412 Packages.gz
+ 42d68647f1b27f0ea25d1ecf22f36ac8              617 Packages
+ 05d3032cb7819fc121c2447874f0a092              413 Packages.gz
 SHA256:
- d3766db6c8ea62299c9f9c655185d4b807deb750351b4c42c7a590b161fefcd4              617 Packages
- 1becaabcd19093129e00e6ae5a3ead2761771029c68b40a562a346163e0434d7              412 Packages.gz
+ 932ad27b08b19fd39f2527dac90674f86e4d7f40691de980e5cf0bd35799e0f5              617 Packages
+ be0115eb83f1087d287c312fcbd78147be2e8f6a6496734ccfbfb2d0d8a54dd4              413 Packages.gz
