@@ -42,4 +42,4 @@ https://purge.jsdelivr.net/gh/manhvip/autoios-repo@main/Packages.gz
 https://purge.jsdelivr.net/gh/manhvip/autoios-repo@main/Release
 ```
 
-Gói hiện tại: `com.manhvip.autoios` 0.4.21.
+Gói hiện tại: `com.manhvip.autoios` 0.4.37.
