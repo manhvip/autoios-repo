@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#121416">
-  <title>AutoIOS - Nguồn Sileo</title>
-  <meta name="description" content="Nguồn apt AutoIOS cho Sileo. Cài tweak jailbreak, chạm màn hình qua TrollVNC, viết Lua trên Web IDE.">
+  <title>AutoIOS · Tự động hóa iPhone jailbreak</title>
+  <meta name="description" content="AutoIOS: tweak Sileo + Auto IOS Studio. Lua, Live View TrollVNC, Flow Builder, roster nhiều máy. Free + Premium từ 15.000₫.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233a9d6e'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preload" as="image" href="wiki/hero.jpg">
@@ -408,12 +408,285 @@
     .note { margin: var(--s4) 0 0; color: var(--muted); font-size: 0.95rem; max-width: 70ch; }
     .note + .panel { margin-top: var(--s3); }
 
-    .source, .ship, .tap, .log, .ssh {
+    .source, .ship, .tap, .log, .ssh,
+    .features, .how, .pricing, .stats-wrap {
       padding: var(--s7) 0 var(--s8);
     }
     @media (min-width: 768px) {
-      .source, .ship, .tap, .log, .ssh { padding: var(--s8) 0 112px; }
+      .source, .ship, .tap, .log, .ssh,
+      .features, .how, .pricing, .stats-wrap { padding: var(--s8) 0 112px; }
     }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 var(--s3);
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--accent) 10%, var(--bg-2));
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .kicker::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 28%, transparent);
+    }
+
+    .stats-wrap { padding-top: 0; padding-bottom: var(--s6); }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s3);
+      padding: var(--s4);
+      border-radius: var(--r-panel);
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+    }
+    @media (min-width: 720px) {
+      .stats { grid-template-columns: repeat(4, 1fr); gap: var(--s4); }
+    }
+    .stats div { min-width: 0; }
+    .stats strong {
+      display: block;
+      font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+      font-weight: 650;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    .stats span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .sec-head { margin-bottom: var(--s5); max-width: 62ch; }
+    .sec-head .eyebrow {
+      margin: 0 0 var(--s2);
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .feat-grid {
+      display: grid;
+      gap: var(--s3);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    @media (min-width: 640px) {
+      .feat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 960px) {
+      .feat-grid { grid-template-columns: repeat(3, 1fr); gap: var(--s4); }
+    }
+    .feat {
+      padding: var(--s4);
+      border-radius: var(--r-code);
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+      transition: border-color 0.28s var(--ease), transform 0.28s var(--ease);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .feat:hover {
+        border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+        transform: translateY(-2px);
+      }
+    }
+    .feat .tag {
+      display: inline-block;
+      margin: 0 0 var(--s3);
+      padding: 4px 8px;
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--accent) 14%, transparent);
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .feat h3 {
+      margin: 0 0 var(--s2);
+      font-size: 1.12rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .feat p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+      max-width: 36ch;
+    }
+
+    .how-list {
+      display: grid;
+      gap: var(--s3);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: how;
+    }
+    .how-list > li {
+      display: grid;
+      gap: var(--s3);
+      padding: var(--s4);
+      border-radius: var(--r-code);
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+      counter-increment: how;
+    }
+    @media (min-width: 720px) {
+      .how-list > li {
+        grid-template-columns: auto 1fr;
+        align-items: start;
+        gap: var(--s4);
+      }
+    }
+    .how-list .n {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--accent) 16%, var(--bg));
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 650;
+    }
+    .how-list .n::before { content: counter(how); }
+    .how-list h3 {
+      margin: 0 0 6px;
+      font-size: 1.08rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .how-list p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 62ch;
+    }
+    .how-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: var(--s3);
+    }
+    .how-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 550;
+      text-decoration: none;
+      transition: border-color 0.28s var(--ease), background 0.28s var(--ease);
+    }
+    .how-links a:hover {
+      border-color: color-mix(in srgb, var(--accent) 50%, var(--line));
+      background: color-mix(in srgb, var(--accent) 8%, transparent);
+    }
+    .how-links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    .price-grid {
+      display: grid;
+      gap: var(--s3);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    @media (min-width: 800px) {
+      .price-grid { grid-template-columns: repeat(3, 1fr); gap: var(--s4); }
+    }
+    .price {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: var(--s5) var(--s4);
+      border-radius: var(--r-panel);
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+    }
+    .price.hot {
+      border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+      box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 20%, transparent), var(--shadow);
+    }
+    .price .badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 650;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .price .tier {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 550;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .price .amount {
+      margin: 0 0 var(--s2);
+      font-size: clamp(1.55rem, 2.5vw, 1.9rem);
+      font-weight: 650;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    .price .blurb {
+      margin: 0 0 var(--s4);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+    .price ul {
+      margin: 0 0 var(--s5);
+      padding: 0;
+      list-style: none;
+      flex: 1;
+    }
+    .price li {
+      position: relative;
+      padding: 8px 0 8px 18px;
+      color: var(--ink);
+      font-size: 0.94rem;
+      border-top: 1px solid var(--line);
+    }
+    .price li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 15px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .price .btn { width: 100%; padding: 0 18px; margin-top: auto; }
 
     .panel {
       margin-top: var(--s4);
@@ -639,9 +912,10 @@
     <header class="nav">
       <a class="mark" href="#top">AutoIOS</a>
       <nav class="nav-links" data-i18n-aria="navAria" aria-label="Mục lục">
+        <a href="#features" data-i18n="navFeatures">Tính năng</a>
+        <a href="#how" data-i18n="navHow">Cách dùng</a>
+        <a href="#pricing" data-i18n="navPricing">Bảng giá</a>
         <a href="#source" data-i18n="navSource">Nguồn</a>
-        <a href="#ship" data-i18n="navShip">IDE</a>
-        <a href="#log" data-i18n="navLog">Nhật ký</a>
         <a href="#ssh" data-i18n="navSsh">SSH</a>
       </nav>
       <div class="controls">
@@ -660,14 +934,16 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-copy">
-        <h1 data-i18n-html="heroTitle">Nguồn AutoIOS<br>cho Sileo.</h1>
-        <p class="lede" data-i18n="heroLede">Cài tweak từ GitHub raw. Chạm màn hình qua TrollVNC. Viết Lua trên Web IDE cùng Wi-Fi.</p>
+        <p class="kicker" data-i18n="heroKicker">Phiên bản 0.4.62 · sẵn sàng dùng</p>
+        <h1 data-i18n-html="heroTitle">Tự động hóa<br>iPhone jailbreak.</h1>
+        <p class="lede" data-i18n="heroLede">Cài tweak qua Sileo, viết Lua trên Auto IOS Studio, xem Live View qua TrollVNC. Auth Bearer, license HMAC, roster nhiều máy — Free dùng thử, Premium bỏ giới hạn 2 phút.</p>
         <div class="actions">
           <button type="button" class="btn primary" id="copy-source">
             <span id="copy-label" data-i18n="ctaCopy">Sao chép nguồn</span>
             <span class="btn-orb" aria-hidden="true"></span>
           </button>
-          <a class="btn ghost" href="#ssh" data-i18n="ctaSsh">Cài SSH</a>
+          <a class="btn ghost" href="#how" data-i18n="ctaHow">Xem cách dùng</a>
+          <a class="btn ghost" href="#pricing" data-i18n="ctaPricing">Bảng giá</a>
         </div>
       </div>
       <div class="bezel">
@@ -675,6 +951,170 @@
           <img src="wiki/hero.jpg" width="1536" height="1024" fetchpriority="high" decoding="async" data-i18n-alt="heroAlt" alt="iPhone trên bàn kim loại tối, đèn trạng thái xanh phosphor trên dock">
         </figure>
       </div>
+    </section>
+
+    <section class="stats-wrap reveal" aria-label="Thống kê">
+      <div class="stats">
+        <div>
+          <strong data-i18n="stat1v">102</strong>
+          <span data-i18n="stat1l">Hàm Lua</span>
+        </div>
+        <div>
+          <strong data-i18n="stat2v">2 phút</strong>
+          <span data-i18n="stat2l">Giới hạn Free</span>
+        </div>
+        <div>
+          <strong data-i18n="stat3v">iOS 14+</strong>
+          <span data-i18n="stat3l">Jailbreak</span>
+        </div>
+        <div>
+          <strong data-i18n="stat4v">15k₫</strong>
+          <span data-i18n="stat4l">Premium từ</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="features reveal" id="features">
+      <div class="sec-head">
+        <p class="eyebrow" data-i18n="featEyebrow">Tính năng</p>
+        <h2 data-i18n="featTitle">Mọi thứ cần để chạy script trên máy jailbreak</h2>
+        <p class="body" data-i18n="featBody">Studio trên máy tính, tweak trên iPhone, Live View và license HMAC — đúng những gì đang ship.</p>
+      </div>
+      <ul class="feat-grid">
+        <li class="feat">
+          <span class="tag" data-i18n="feat1tag">Studio</span>
+          <h3 data-i18n="feat1t">Auto IOS Studio</h3>
+          <p data-i18n="feat1b">Editor Monaco Lua, Console, Explorer, Flow Builder trên máy tính. Kết nối iPhone qua Wi‑Fi hoặc USB usbmux.</p>
+        </li>
+        <li class="feat">
+          <span class="tag" data-i18n="feat2tag">View</span>
+          <h3 data-i18n="feat2t">Live View TrollVNC</h3>
+          <p data-i18n="feat2b">Xem và chạm màn hình qua noVNC cổng 5902. Tap/swipe cùng đường RFB với View — không BKHID.</p>
+        </li>
+        <li class="feat">
+          <span class="tag" data-i18n="feat3tag">Lua</span>
+          <h3 data-i18n="feat3t">102 hàm Lua thật</h3>
+          <p data-i18n="feat3b">Tap, swipe, pinch, rotate, OCR, color, HTTP, clipboard, app control… Stub phải warn — không im lặng.</p>
+        </li>
+        <li class="feat">
+          <span class="tag" data-i18n="feat4tag">Fleet</span>
+          <h3 data-i18n="feat4t">Roster &amp; Runs</h3>
+          <p data-i18n="feat4b">Đăng ký nhiều máy, poll song song, một máy active. Tab Runs theo dõi job trên Studio.</p>
+        </li>
+        <li class="feat">
+          <span class="tag" data-i18n="feat5tag">Flow</span>
+          <h3 data-i18n="feat5t">Visual Flow Builder</h3>
+          <p data-i18n="feat5b">Kéo-thả block → sinh Lua. Undo/redo, node End, thư viện require — chạy trên cùng runtime máy.</p>
+        </li>
+        <li class="feat">
+          <span class="tag" data-i18n="feat6tag">Secure</span>
+          <h3 data-i18n="feat6t">Auth &amp; License</h3>
+          <p data-i18n="feat6b">Bearer token trên API :2000. Premium bằng key HMAC gắn thiết bị. Free tối đa 2 phút mỗi lần chạy.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="how reveal" id="how">
+      <div class="sec-head">
+        <p class="eyebrow" data-i18n="howEyebrow">Cách dùng</p>
+        <h2 data-i18n="howTitle">Từ máy sạch đến chạy script</h2>
+        <p class="body" data-i18n="howBody">Năm bước ngắn. Video hướng dẫn có thể gắn sau — hiện dùng checklist đúng luồng cài đang ship.</p>
+      </div>
+      <ol class="how-list">
+        <li>
+          <span class="n" aria-hidden="true"></span>
+          <div>
+            <h3 data-i18n="how1t">Jailbreak iPhone</h3>
+            <p data-i18n="how1b">Cần máy đã jailbreak iOS 14+ (MobileSubstrate). Dopamine phổ biến trên iOS 15–16; kiểm tra rootless /var/jb.</p>
+            <div class="how-links">
+              <a href="https://github.com/opa334/Dopamine/releases" rel="noreferrer" target="_blank">Dopamine</a>
+              <a href="https://sideloadly.io/" rel="noreferrer" target="_blank">Sideloadly</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <span class="n" aria-hidden="true"></span>
+          <div>
+            <h3 data-i18n="how2t">Thêm nguồn &amp; cài AutoIOS</h3>
+            <p data-i18n="how2b">Trong Sileo: Sources → + → dán raw.githubusercontent. Search AutoIOS, cài com.manhvip.autoios. Hoặc dùng lệnh SSH bên dưới.</p>
+            <div class="how-links">
+              <a href="#source" data-i18n="how2a">Tới nguồn Sileo</a>
+              <a href="#ssh" data-i18n="how2bLink">Cài SSH</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <span class="n" aria-hidden="true"></span>
+          <div>
+            <h3 data-i18n="how3t">Bật LAN &amp; mở Studio</h3>
+            <p data-i18n="how3b">Settings trên máy → bật LAN. Mở Auto IOS Studio (hoặc trình duyệt cùng Wi‑Fi tới http://&lt;ip&gt;:2000) với token 8 ký tự.</p>
+          </div>
+        </li>
+        <li>
+          <span class="n" aria-hidden="true"></span>
+          <div>
+            <h3 data-i18n="how4t">Nhập license (tuỳ chọn)</h3>
+            <p data-i18n="how4b">Free chạy được ngay, giới hạn 2 phút/lần. Premium: dán key HMAC trong Settings — bỏ giới hạn thời gian chạy.</p>
+            <div class="how-links">
+              <a href="#pricing" data-i18n="how4a">Xem bảng giá</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <span class="n" aria-hidden="true"></span>
+          <div>
+            <h3 data-i18n="how5t">Viết Lua &amp; Run</h3>
+            <p data-i18n="how5b">Mở editor hoặc Flow Builder, Run trên máy active. Xem log realtime, Live View để theo dõi. Script lưu tại /var/mobile/Documents/autoios.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="pricing reveal" id="pricing">
+      <div class="sec-head">
+        <p class="eyebrow" data-i18n="priceEyebrow">Bảng giá</p>
+        <h2 data-i18n="priceTitle">Free dùng thử · Premium bỏ giới hạn</h2>
+        <p class="body" data-i18n="priceBody">1 key gắn 1 thiết bị (HMAC). Nhập key trong Settings trên máy.</p>
+      </div>
+      <ul class="price-grid">
+        <li class="price">
+          <p class="tier" data-i18n="priceFreeTier">Free</p>
+          <p class="amount" data-i18n="priceFreeAmt">0₫</p>
+          <p class="blurb" data-i18n="priceFreeBlurb">Cài từ Sileo, đủ API để học và thử script.</p>
+          <ul>
+            <li data-i18n="priceFree1">Đầy đủ hàm Lua (có giới hạn thời gian)</li>
+            <li data-i18n="priceFree2">Live View + Studio</li>
+            <li data-i18n="priceFree3">Tối đa 2 phút mỗi lần Run</li>
+            <li data-i18n="priceFree4">Bearer auth trên :2000</li>
+          </ul>
+          <a class="btn ghost" href="#source" data-i18n="priceFreeCta">Cài miễn phí</a>
+        </li>
+        <li class="price hot">
+          <span class="badge" data-i18n="priceHot">Phổ biến</span>
+          <p class="tier" data-i18n="priceProTier">Premium</p>
+          <p class="amount" data-i18n="priceProAmt">15.000₫</p>
+          <p class="blurb" data-i18n="priceProBlurb">15 ngày · 30 ngày 29.900₫ · 1 năm 299.000₫</p>
+          <ul>
+            <li data-i18n="pricePro1">Không cắt 2 phút khi Run</li>
+            <li data-i18n="pricePro2">Key HMAC gắn thiết bị</li>
+            <li data-i18n="pricePro3">Cùng full API + Studio + View</li>
+            <li data-i18n="pricePro4">Gia hạn bằng key mới</li>
+          </ul>
+          <a class="btn primary" href="https://github.com/manhvip/autoios-repo" rel="noreferrer" data-i18n="priceProCta">Liên hệ mua key</a>
+        </li>
+        <li class="price">
+          <p class="tier" data-i18n="priceEntTier">Nhiều máy</p>
+          <p class="amount" data-i18n="priceEntAmt">Theo máy</p>
+          <p class="blurb" data-i18n="priceEntBlurb">Mỗi máy một key Premium. Roster Studio quản lý nhiều thiết bị.</p>
+          <ul>
+            <li data-i18n="priceEnt1">1 key = 1 UDID / deviceId</li>
+            <li data-i18n="priceEnt2">Roster Wi‑Fi + USB usbmux</li>
+            <li data-i18n="priceEnt3">Tab Runs theo dõi job</li>
+            <li data-i18n="priceEnt4">Studio quản lý roster tập trung</li>
+          </ul>
+          <a class="btn ghost" href="https://github.com/manhvip/autoios-repo" rel="noreferrer" data-i18n="priceEntCta">Liên hệ</a>
+        </li>
+      </ul>
     </section>
 
     <section class="source reveal" id="source">
@@ -728,7 +1168,7 @@
         </div>
         <div>
           <dt data-i18n="metaNow">Hiện tại</dt>
-          <dd>0.4.20 - iphoneos-arm64</dd>
+          <dd>0.4.62 - iphoneos-arm64</dd>
         </div>
         <div>
           <dt data-i18n="metaNeed">Yêu cầu</dt>
@@ -746,7 +1186,7 @@
 
     <section class="ship reveal" id="ship">
       <div class="ship-copy">
-        <h2 data-i18n="shipTitle">Web IDE trên LAN</h2>
+        <h2 data-i18n="shipTitle">Studio / Web IDE trên LAN</h2>
         <p class="body">
           <span data-i18n="ship1a">Sau khi cài, bật LAN trong Settings. Trình duyệt cùng Wi-Fi mở</span>
           <code>http://&lt;ip&gt;:2000</code>
@@ -784,16 +1224,16 @@
       <h2 data-i18n="logTitle">Nhật ký gần đây</h2>
       <div class="log-grid">
         <article class="log-now">
-          <h3>0.4.20</h3>
-          <p data-i18n="log20">Home bằng nút menu TrollVNC. Wait Text / Tap Text OCR hết cgimage-fail.</p>
+          <h3>0.4.62</h3>
+          <p data-i18n="log62">Smoke 27/27 PASS trên iOS 16.3.1. License HMAC e2e, SpringBoard HTTP, 0 stub / 102 hàm Lua.</p>
         </article>
         <article>
-          <h3>0.4.19</h3>
-          <p data-i18n="log19">Settings mở popup. Flow Builder có node End và canvas hình tròn.</p>
+          <h3>0.4.61</h3>
+          <p data-i18n="log61">Roster / USB usbmux / tab Runs trong Studio. PROJECT_SPEC khớp bản ship.</p>
         </article>
         <article>
           <h3 data-i18n="logLua">Lua và HID</h3>
-          <p data-i18n="logLuaBody">0.4.16 pinch/rotate, frontMostAppId, typeKeys. 0.4.15 hoàn tất API Lua còn lại. 0.4.12 execute, appKill, proxy, vibrate, keepAwake.</p>
+          <p data-i18n="logLuaBody">0.4.16 pinch/rotate, frontMostAppId, typeKeys. OCR/record/deviceInfo qua helper. Auth Bearer + Free 2 phút.</p>
         </article>
       </div>
     </section>
@@ -824,6 +1264,7 @@
       <a href="https://github.com/manhvip/autoios-repo" class="ext" rel="noreferrer">GitHub</a>
     </div>
     <p data-i18n="foot1">© 2026 Mạnh VIP. Phần mềm độc quyền. Gói kèm TrollVNC (GPL-2.0) và noVNC.</p>
+    <p data-i18n="foot2">Dành cho nghiên cứu và tự động hóa hợp pháp trên thiết bị bạn sở hữu.</p>
   </footer>
 
   <script>
@@ -833,26 +1274,102 @@
       var SSH = "curl -L https://raw.githubusercontent.com/manhvip/autoios-repo/main/debs/install-autoios.sh | sh";
       var I18N = {
         vi: {
-          title: "AutoIOS - Nguồn Sileo",
-          desc: "Nguồn apt AutoIOS cho Sileo. Cài tweak jailbreak, chạm màn hình qua TrollVNC, viết Lua trên Web IDE.",
+          title: "AutoIOS · Tự động hóa iPhone jailbreak",
+          desc: "AutoIOS: tweak Sileo + Auto IOS Studio. Lua, Live View TrollVNC, Flow Builder, roster nhiều máy. Free + Premium từ 15.000₫.",
           skip: "Tới nội dung",
           navAria: "Mục lục",
           langAria: "Ngôn ngữ",
           themeAria: "Giao diện",
+          navFeatures: "Tính năng",
+          navHow: "Cách dùng",
+          navPricing: "Bảng giá",
           navSource: "Nguồn",
-          navShip: "IDE",
-          navLog: "Nhật ký",
           navSsh: "SSH",
           themeLight: "Sáng",
           themeDark: "Tối",
-          heroTitle: "Nguồn AutoIOS<br>cho Sileo.",
-          heroLede: "Cài tweak từ GitHub raw. Chạm màn hình qua TrollVNC. Viết Lua trên Web IDE cùng Wi-Fi.",
+          heroKicker: "Phiên bản 0.4.62 · sẵn sàng dùng",
+          heroTitle: "Tự động hóa<br>iPhone jailbreak.",
+          heroLede: "Cài tweak qua Sileo, viết Lua trên Auto IOS Studio, xem Live View qua TrollVNC. Auth Bearer, license HMAC, roster nhiều máy — Free dùng thử, Premium bỏ giới hạn 2 phút.",
           ctaCopy: "Sao chép nguồn",
           ctaCopied: "Đã sao chép",
           ctaCopyFail: "Không sao chép được",
           ctaCopyShort: "Sao chép",
-          ctaSsh: "Cài SSH",
+          ctaHow: "Xem cách dùng",
+          ctaPricing: "Bảng giá",
           heroAlt: "iPhone trên bàn kim loại tối, đèn trạng thái xanh phosphor trên dock",
+          stat1v: "102",
+          stat1l: "Hàm Lua",
+          stat2v: "2 phút",
+          stat2l: "Giới hạn Free",
+          stat3v: "iOS 14+",
+          stat3l: "Jailbreak",
+          stat4v: "15k₫",
+          stat4l: "Premium từ",
+          featEyebrow: "Tính năng",
+          featTitle: "Mọi thứ cần để chạy script trên máy jailbreak",
+          featBody: "Studio trên máy tính, tweak trên iPhone, Live View và license HMAC — đúng những gì đang ship.",
+          feat1tag: "Studio",
+          feat1t: "Auto IOS Studio",
+          feat1b: "Editor Monaco Lua, Console, Explorer, Flow Builder trên máy tính. Kết nối iPhone qua Wi‑Fi hoặc USB usbmux.",
+          feat2tag: "View",
+          feat2t: "Live View TrollVNC",
+          feat2b: "Xem và chạm màn hình qua noVNC cổng 5902. Tap/swipe cùng đường RFB với View — không BKHID.",
+          feat3tag: "Lua",
+          feat3t: "102 hàm Lua thật",
+          feat3b: "Tap, swipe, pinch, rotate, OCR, color, HTTP, clipboard, app control… Stub phải warn — không im lặng.",
+          feat4tag: "Fleet",
+          feat4t: "Roster & Runs",
+          feat4b: "Đăng ký nhiều máy, poll song song, một máy active. Tab Runs theo dõi job trên Studio.",
+          feat5tag: "Flow",
+          feat5t: "Visual Flow Builder",
+          feat5b: "Kéo-thả block → sinh Lua. Undo/redo, node End, thư viện require — chạy trên cùng runtime máy.",
+          feat6tag: "Secure",
+          feat6t: "Auth & License",
+          feat6b: "Bearer token trên API :2000. Premium bằng key HMAC gắn thiết bị. Free tối đa 2 phút mỗi lần chạy.",
+          howEyebrow: "Cách dùng",
+          howTitle: "Từ máy sạch đến chạy script",
+          howBody: "Năm bước ngắn. Checklist đúng luồng cài đang ship.",
+          how1t: "Jailbreak iPhone",
+          how1b: "Cần máy đã jailbreak iOS 14+ (MobileSubstrate). Dopamine phổ biến trên iOS 15–16; kiểm tra rootless /var/jb.",
+          how2t: "Thêm nguồn & cài AutoIOS",
+          how2b: "Trong Sileo: Sources → + → dán raw.githubusercontent. Search AutoIOS, cài com.manhvip.autoios. Hoặc dùng lệnh SSH bên dưới.",
+          how2a: "Tới nguồn Sileo",
+          how2bLink: "Cài SSH",
+          how3t: "Bật LAN & mở Studio",
+          how3b: "Settings trên máy → bật LAN. Mở Auto IOS Studio (hoặc trình duyệt cùng Wi‑Fi tới http://<ip>:2000) với token 8 ký tự.",
+          how4t: "Nhập license (tuỳ chọn)",
+          how4b: "Free chạy được ngay, giới hạn 2 phút/lần. Premium: dán key HMAC trong Settings — bỏ giới hạn thời gian chạy.",
+          how4a: "Xem bảng giá",
+          how5t: "Viết Lua & Run",
+          how5b: "Mở editor hoặc Flow Builder, Run trên máy active. Xem log realtime, Live View để theo dõi. Script lưu tại /var/mobile/Documents/autoios.",
+          priceEyebrow: "Bảng giá",
+          priceTitle: "Free dùng thử · Premium bỏ giới hạn",
+          priceBody: "1 key gắn 1 thiết bị (HMAC). Nhập key trong Settings trên máy.",
+          priceFreeTier: "Free",
+          priceFreeAmt: "0₫",
+          priceFreeBlurb: "Cài từ Sileo, đủ API để học và thử script.",
+          priceFree1: "Đầy đủ hàm Lua (có giới hạn thời gian)",
+          priceFree2: "Live View + Studio",
+          priceFree3: "Tối đa 2 phút mỗi lần Run",
+          priceFree4: "Bearer auth trên :2000",
+          priceFreeCta: "Cài miễn phí",
+          priceHot: "Phổ biến",
+          priceProTier: "Premium",
+          priceProAmt: "15.000₫",
+          priceProBlurb: "15 ngày · 30 ngày 29.900₫ · 1 năm 299.000₫",
+          pricePro1: "Không cắt 2 phút khi Run",
+          pricePro2: "Key HMAC gắn thiết bị",
+          pricePro3: "Cùng full API + Studio + View",
+          pricePro4: "Gia hạn bằng key mới",
+          priceProCta: "Liên hệ mua key",
+          priceEntTier: "Nhiều máy",
+          priceEntAmt: "Theo máy",
+          priceEntBlurb: "Mỗi máy một key Premium. Roster Studio quản lý nhiều thiết bị.",
+          priceEnt1: "1 key = 1 thiết bị",
+          priceEnt2: "Roster Wi‑Fi + USB usbmux",
+          priceEnt3: "Tab Runs theo dõi job",
+          priceEnt4: "Studio quản lý roster tập trung",
+          priceEntCta: "Liên hệ",
           sourceTitle: "Thêm nguồn trong Sileo",
           sourceBody: "Dùng raw.githubusercontent. Ít cache hơn github.io, tránh lỗi hash Packages khi Refresh.",
           sourceHint: "Chạm URL hoặc nút Sao chép. Dán vào Sileo, Sources, dấu +.",
@@ -872,7 +1389,7 @@
           metaNeed: "Yêu cầu",
           metaNeedVal: "iOS 14+, MobileSubstrate",
           sourceNote: "Không thêm <code>https://manhvip.github.io/autoios-repo/</code> vào Sileo. Trang đó chỉ là wiki. CDN dự phòng:",
-          shipTitle: "Web IDE trên LAN",
+          shipTitle: "Studio / Web IDE trên LAN",
           ship1a: "Sau khi cài, bật LAN trong Settings. Trình duyệt cùng Wi-Fi mở",
           ship1b: "kèm token 8 ký tự. App 0.4.14 trở lên mở đúng IP máy, không cần gõ URL.",
           ship2a: "Token nằm trong Settings và",
@@ -883,38 +1400,115 @@
           tapAlt: "Ngón cái chạm màn hình iPhone trong phòng tối, viền máy sáng xanh phosphor",
           tapCaption: "Chạm trong View đi qua TrollVNC RFB, cùng đường với click. Không BKHID, không IOHID. VNC: cổng 5902, mật khẩu là 8 ký tự đầu của token.",
           logTitle: "Nhật ký gần đây",
-          log20: "Home bằng nút menu TrollVNC. Wait Text / Tap Text OCR hết cgimage-fail.",
-          log19: "Settings mở popup. Flow Builder có node End và canvas hình tròn.",
+          log62: "Smoke 27/27 PASS trên iOS 16.3.1. License HMAC e2e, SpringBoard HTTP, 0 stub / 102 hàm Lua.",
+          log61: "Roster / USB usbmux / tab Runs trong Studio. PROJECT_SPEC khớp bản ship.",
           logLua: "Lua và HID",
-          logLuaBody: "0.4.16 pinch/rotate, frontMostAppId, typeKeys. 0.4.15 hoàn tất API Lua còn lại. 0.4.12 execute, appKill, proxy, vibrate, keepAwake.",
+          logLuaBody: "0.4.16 pinch/rotate, frontMostAppId, typeKeys. OCR/record/deviceInfo qua helper. Auth Bearer + Free 2 phút.",
           sshTitle: "Cài bằng SSH",
           sshBody: "Không cần Sileo. Chạy trên máy đã jailbreak, user root.",
           sshNoteA: "Script gỡ",
           sshNoteB: "nếu còn, rồi cài",
           sshNoteC: "Script Lua lưu tại",
-          foot1: "© 2026 Mạnh VIP. Phần mềm độc quyền. Gói kèm TrollVNC (GPL-2.0) và noVNC."
+          foot1: "© 2026 Mạnh VIP. Phần mềm độc quyền. Gói kèm TrollVNC (GPL-2.0) và noVNC.",
+          foot2: "Dành cho nghiên cứu và tự động hóa hợp pháp trên thiết bị bạn sở hữu."
         },
         en: {
-          title: "AutoIOS - Sileo source",
-          desc: "AutoIOS apt source for Sileo. Install the jailbreak tweak, tap the screen over TrollVNC, and write Lua in the Web IDE.",
+          title: "AutoIOS · Jailbreak iPhone automation",
+          desc: "AutoIOS: Sileo tweak + Auto IOS Studio. Lua, TrollVNC Live View, Flow Builder, multi-device roster. Free + Premium from 15,000₫.",
           skip: "Skip to content",
           navAria: "On this page",
           langAria: "Language",
           themeAria: "Appearance",
+          navFeatures: "Features",
+          navHow: "How to",
+          navPricing: "Pricing",
           navSource: "Source",
-          navShip: "IDE",
-          navLog: "Log",
           navSsh: "SSH",
           themeLight: "Light",
           themeDark: "Dark",
-          heroTitle: "The AutoIOS source<br>for Sileo.",
-          heroLede: "Install the tweak from GitHub raw. Tap the screen over TrollVNC. Write Lua in the LAN Web IDE.",
+          heroKicker: "Version 0.4.62 · ready to use",
+          heroTitle: "Automate your<br>jailbroken iPhone.",
+          heroLede: "Install the tweak from Sileo, write Lua in Auto IOS Studio, watch Live View over TrollVNC. Bearer auth, HMAC license, multi-device roster — Free to try, Premium removes the 2-minute cap.",
           ctaCopy: "Copy source",
           ctaCopied: "Copied",
           ctaCopyFail: "Could not copy",
           ctaCopyShort: "Copy",
-          ctaSsh: "SSH install",
+          ctaHow: "See how to use",
+          ctaPricing: "Pricing",
           heroAlt: "iPhone on a dark metal desk with a phosphor-green status light on the dock",
+          stat1v: "102",
+          stat1l: "Lua APIs",
+          stat2v: "2 min",
+          stat2l: "Free run cap",
+          stat3v: "iOS 14+",
+          stat3l: "Jailbreak",
+          stat4v: "15k₫",
+          stat4l: "Premium from",
+          featEyebrow: "Features",
+          featTitle: "Everything you need to run scripts on a jailbroken phone",
+          featBody: "Desktop Studio, on-device tweak, Live View, and HMAC license — what ships today.",
+          feat1tag: "Studio",
+          feat1t: "Auto IOS Studio",
+          feat1b: "Monaco Lua editor, Console, Explorer, Flow Builder on your computer. Connect over Wi‑Fi or USB usbmux.",
+          feat2tag: "View",
+          feat2t: "Live View TrollVNC",
+          feat2b: "Watch and tap the screen via noVNC on port 5902. Taps share the RFB path with View — no BKHID.",
+          feat3tag: "Lua",
+          feat3t: "102 real Lua APIs",
+          feat3b: "Tap, swipe, pinch, rotate, OCR, color, HTTP, clipboard, app control… Stubs must warn — never silent.",
+          feat4tag: "Fleet",
+          feat4t: "Roster & Runs",
+          feat4b: "Register many devices, poll in parallel, one active. Runs tab tracks jobs in Studio.",
+          feat5tag: "Flow",
+          feat5t: "Visual Flow Builder",
+          feat5b: "Drag blocks → emit Lua. Undo/redo, End node, require libraries — same on-device runtime.",
+          feat6tag: "Secure",
+          feat6t: "Auth & License",
+          feat6b: "Bearer token on the :2000 API. Premium via device-bound HMAC key. Free caps each run at 2 minutes.",
+          howEyebrow: "How to",
+          howTitle: "From clean device to running scripts",
+          howBody: "Five short steps. Checklist matches the install path that ships.",
+          how1t: "Jailbreak the iPhone",
+          how1b: "Needs a jailbroken iOS 14+ device (MobileSubstrate). Dopamine is common on iOS 15–16; check rootless /var/jb.",
+          how2t: "Add the source & install AutoIOS",
+          how2b: "In Sileo: Sources → + → paste raw.githubusercontent. Search AutoIOS, install com.manhvip.autoios. Or use the SSH command below.",
+          how2a: "Go to Sileo source",
+          how2bLink: "SSH install",
+          how3t: "Enable LAN & open Studio",
+          how3b: "On-device Settings → enable LAN. Open Auto IOS Studio (or a same-Wi‑Fi browser at http://<ip>:2000) with the 8-character token.",
+          how4t: "Enter a license (optional)",
+          how4b: "Free works immediately with a 2-minute cap. Premium: paste the HMAC key in Settings to remove the run-time limit.",
+          how4a: "See pricing",
+          how5t: "Write Lua & Run",
+          how5b: "Open the editor or Flow Builder, Run on the active device. Watch realtime logs and Live View. Scripts live at /var/mobile/Documents/autoios.",
+          priceEyebrow: "Pricing",
+          priceTitle: "Free to try · Premium removes the cap",
+          priceBody: "One key binds to one device (HMAC). Enter the key in on-device Settings.",
+          priceFreeTier: "Free",
+          priceFreeAmt: "0₫",
+          priceFreeBlurb: "Install from Sileo — full APIs to learn and try scripts.",
+          priceFree1: "Full Lua APIs (time-capped)",
+          priceFree2: "Live View + Studio",
+          priceFree3: "Max 2 minutes per Run",
+          priceFree4: "Bearer auth on :2000",
+          priceFreeCta: "Install free",
+          priceHot: "Popular",
+          priceProTier: "Premium",
+          priceProAmt: "15,000₫",
+          priceProBlurb: "15 days · 30 days 29,900₫ · 1 year 299,000₫",
+          pricePro1: "No 2-minute Run cut-off",
+          pricePro2: "Device-bound HMAC key",
+          pricePro3: "Same full API + Studio + View",
+          pricePro4: "Renew with a new key",
+          priceProCta: "Contact to buy",
+          priceEntTier: "Many devices",
+          priceEntAmt: "Per device",
+          priceEntBlurb: "One Premium key per device. Studio roster manages many phones.",
+          priceEnt1: "1 key = 1 device",
+          priceEnt2: "Wi‑Fi roster + USB usbmux",
+          priceEnt3: "Runs tab tracks jobs",
+          priceEnt4: "Central roster in Studio",
+          priceEntCta: "Contact",
           sourceTitle: "Add the source in Sileo",
           sourceBody: "Use raw.githubusercontent. It caches less than github.io and avoids Packages hash errors on Refresh.",
           sourceHint: "Tap the URL or Copy. Paste it in Sileo, Sources, then +.",
@@ -934,7 +1528,7 @@
           metaNeed: "Requires",
           metaNeedVal: "iOS 14+, MobileSubstrate",
           sourceNote: "Do not add <code>https://manhvip.github.io/autoios-repo/</code> in Sileo. That URL is the wiki only. CDN backup:",
-          shipTitle: "Web IDE on the LAN",
+          shipTitle: "Studio / Web IDE on the LAN",
           ship1a: "After install, turn on LAN in Settings. On the same Wi-Fi, open",
           ship1b: "with the 8-character token. From 0.4.14 the app opens the phone IP, so you do not type a URL.",
           ship2a: "The token lives in Settings and",
@@ -945,16 +1539,17 @@
           tapAlt: "A thumb tapping an iPhone screen in a dark room, phosphor-green rim light on the frame",
           tapCaption: "A tap in View travels over TrollVNC RFB, the same path as a click. No BKHID, no IOHID. VNC port 5902. The password is the first 8 characters of the token.",
           logTitle: "Recent log",
-          log20: "Home from the TrollVNC menu button. Wait Text and Tap Text OCR no longer fail on CGImage.",
-          log19: "Settings opens as a popup. Flow Builder adds an End node and a circular canvas.",
+          log62: "Smoke 27/27 PASS on iOS 16.3.1. HMAC license e2e, SpringBoard HTTP, 0 stub / 102 Lua APIs.",
+          log61: "Roster / USB usbmux / Runs tab in Studio. PROJECT_SPEC matches what ships.",
           logLua: "Lua and HID",
-          logLuaBody: "0.4.16 pinch/rotate, frontMostAppId, typeKeys. 0.4.15 finishes the remaining Lua APIs. 0.4.12 execute, appKill, proxy, vibrate, keepAwake.",
+          logLuaBody: "0.4.16 pinch/rotate, frontMostAppId, typeKeys. OCR/record/deviceInfo via helper. Bearer auth + Free 2-minute cap.",
           sshTitle: "Install over SSH",
           sshBody: "Sileo is optional. Run this as root on a jailbroken device.",
           sshNoteA: "The script removes",
           sshNoteB: "if it is still installed, then installs",
           sshNoteC: "Lua scripts live at",
-          foot1: "© 2026 Mạnh VIP. Proprietary software. The package ships TrollVNC (GPL-2.0) and noVNC."
+          foot1: "© 2026 Mạnh VIP. Proprietary software. The package ships TrollVNC (GPL-2.0) and noVNC.",
+          foot2: "For research and lawful automation on devices you own."
         }
       };
 
