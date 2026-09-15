@@ -1,15 +1,15 @@
-Origin: autoios
-Label: autoios
+Origin: AutoIOS
+Label: AutoIOS
 Suite: stable
 Version: 1.0
-Codename: autoios
+Codename: ios
 Architectures: iphoneos-arm64
 Components: main
-Description: autoios jailbreak automation packages
-Date: Sun, 13 Sep 2026 16:29:39 UTC
+Description: AutoIOS Sileo repo
+Date: Tue, 15 Sep 2026 17:06:17 UTC
 MD5Sum:
- eabda6595efc29197d45a04691028a6c              617 Packages
- 57e3c83fbb7cb38692ac7ceaae38288a              409 Packages.gz
+ ebad9966b802e6813a7e79d6d7b55c08 617 Packages
+ 7af13669e08c8334f325d1a50728052f 412 Packages.gz
 SHA256:
- 28498c22fb6ecd7fc6364a85d570033a1ae12f8a5613bab3209195413d4aba7e              617 Packages
- 64f006776959dbb2a929093deca194717faac69b0f1ae043c43cb1b553308708              409 Packages.gz
+ ee20c1a78d68abd08035f8fe254675454c7f5efcb1d685b4432d1dcffe546775 617 Packages
+ 676dfe1ed2a18ad69b9c2f2cc394dd8ad50f29debdf27976c4ab150bff0fbb0f 412 Packages.gz
