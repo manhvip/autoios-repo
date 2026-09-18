@@ -2,11 +2,11 @@ Package: com.manhvip.autoios
 Name: AutoIOS
 Depends: firmware (>= 14.0), mobilesubstrate
 Description: Tap via TrollVNC RFB (same as View click). No BKHID/IOHID.
-Filename: debs/com.manhvip.autoios_0.4.67_iphoneos-arm64.deb
-Size: 1885012
-MD5sum: dbf245d32d73573b6c407c7531180824
-SHA1: 86180c91024a78f9b1cbca57cde56a3f405ab172
-SHA256: 5b73cd0919b86c32444c08fa75329567a607cbc31b7c18590e7e4ab19ee9e614
+Filename: debs/com.manhvip.autoios_0.4.68_iphoneos-arm64.deb
+Size: 1885830
+MD5sum: 1a657c442d1132b410141d73a677d5f0
+SHA1: f74fe835d4395e2fa356bd2748085b2a6aaffad4
+SHA256: 20e4760fac719d7b845a4b62c489541d6c8062015d7bfd13fa63d4d0b3c43a8b
 Maintainer: manhvip
 Author: manhvip
 Section: Tweaks
@@ -14,5 +14,5 @@ Replaces: com.manhvip.autoios-vnc
 Conflicts: com.manhvip.autoios-vnc
 Provides: com.manhvip.autoios-vnc
 Architecture: iphoneos-arm64
-Version: 0.4.67
-Installed-Size: 7060
+Version: 0.4.68
+Installed-Size: 7068
