@@ -6,10 +6,10 @@ Codename: ios
 Architectures: iphoneos-arm64
 Components: main
 Description: AutoIOS Sileo repo
-Date: Thu, 24 Sep 2026 13:48:48 UTC
+Date: Thu, 24 Sep 2026 14:25:40 UTC
 MD5Sum:
- 50fe514242c9839569ef2d67424f8255              617 Packages
- 4381174f527d08c9ad7c0e635558524d              412 Packages.gz
+ 6b5cbb51e87f3a9977c04784701a3d72              617 Packages
+ 79e4848ed3b8329dcc9ca89c4c29b909              411 Packages.gz
 SHA256:
- 037c458703dec3f4928e751acebff0805ecd8c99bb97933e3219fe6b6b9bdee0              617 Packages
- 922ee7df367d8d72a8e5be7d2d5a65b5065233dff51fd731293db65466f51537              412 Packages.gz
+ 92076522bdd34d9f0d368ef2b8821c344aa229d54c59627901c44413ff4f78eb              617 Packages
+ 17555e171cb122423b9e93a80d4638514a390b175ddda5b5982d003c798d1f4d              411 Packages.gz
