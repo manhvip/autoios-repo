@@ -27,9 +27,9 @@ dpkg --configure -a || true
 
 echo "==> Verify"
 dpkg -l com.manhvip.autoios | tail -1
-ls -l /var/jb/usr/local/bin/trollvncserver \
+ls -l /var/jb/usr/local/bin/autoios-trollvncserver \
       /var/jb/Library/LaunchDaemons/com.manhvip.autoios.trollvnc.plist 2>/dev/null || true
-pgrep -l trollvncserver || echo "(trollvnc not running yet)"
+pgrep -l autoios-trollvncserver || echo "(trollvnc not running yet)"
 curl -s http://127.0.0.1:2000/api/status || true
 curl -s http://127.0.0.1:2000/api/vnc/info || true
 echo "DONE"
