@@ -1,11 +1,11 @@
 {
   "version": "0.2.47",
-  "url": "https://mxmmo.com/en/install-studio",
+  "url": "https://autoios.mxmmo.com/en/install-studio",
   "notes": "Studio 0.2.47 — USB bắt buộc (Wi‑Fi chỉ khi thêm tay); nút Cài đặt/Tải lại; lọc máy không reload màn; giữ USB khi driver Windows ngắt tạm.",
   "minDevice": "0.4.107",
   "recommendedDevice": "0.4.107",
   "downloads": {
-    "win": "https://mxmmo.com/downloads/Auto-IOS-Studio-Setup.exe",
-    "mac": "https://mxmmo.com/downloads/Auto-IOS-Studio.dmg"
+    "win": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio-Setup.exe",
+    "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   }
 }
