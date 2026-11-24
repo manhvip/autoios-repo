@@ -1,5 +1,11 @@
 {
-  "version": "0.2.36",
-  "url": "https://docs.autoios.org/en/install-studio",
-  "notes": "Auto IOS Studio desktop IDE"
+  "version": "0.2.44",
+  "url": "http://167.179.95.250/en/install-studio",
+  "notes": "Studio 0.2.44 — farm UI polish; Home/Back without Lua gate (needs Device 0.4.107+).",
+  "minDevice": "0.4.107",
+  "recommendedDevice": "0.4.107",
+  "downloads": {
+    "win": "http://167.179.95.250/downloads/Auto-IOS-Studio-Setup.exe",
+    "mac": "http://167.179.95.250/downloads/Auto-IOS-Studio.dmg"
+  }
 }
