@@ -1,7 +1,7 @@
 {
-  "version": "0.2.45",
+  "version": "0.2.46",
   "url": "http://167.179.95.250/en/install-studio",
-  "notes": "Studio 0.2.45 — Kết nối gộp vào Thiết bị: thêm máy và quản lý chi tiết trong một ngăn bên phải, gọn hơn cho khách.",
+  "notes": "Studio 0.2.46 — Thiết bị gọn hơn: bỏ danh sách máy đăng ký, thêm nhãn USB/Wi‑Fi từng máy và chọn nhanh đích chạy theo USB hoặc Wi‑Fi.",
   "minDevice": "0.4.107",
   "recommendedDevice": "0.4.107",
   "downloads": {
