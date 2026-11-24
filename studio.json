@@ -1,7 +1,7 @@
 {
-  "version": "0.2.44",
+  "version": "0.2.45",
   "url": "http://167.179.95.250/en/install-studio",
-  "notes": "Studio 0.2.44 — farm UI polish; Home/Back without Lua gate (needs Device 0.4.107+).",
+  "notes": "Studio 0.2.45 — Kết nối gộp vào Thiết bị: thêm máy và quản lý chi tiết trong một ngăn bên phải, gọn hơn cho khách.",
   "minDevice": "0.4.107",
   "recommendedDevice": "0.4.107",
   "downloads": {
