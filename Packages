@@ -1,19 +1,19 @@
 Package: com.manhvip.autoios
-Version: 0.4.107
-Architecture: iphoneos-arm64
-Maintainer: manhvip
-Installed-Size: 7156
+Name: Auto Ios
 Depends: firmware (>= 14.0), mobilesubstrate
-Conflicts: com.manhvip.autoios-vnc
-Replaces: com.manhvip.autoios-vnc
-Provides: com.manhvip.autoios-vnc
-Filename: debs/com.manhvip.autoios_0.4.107_iphoneos-arm64.deb
-Size: 1916750
-MD5sum: 0f89e77051b83366f9e7e842d36a44a2
-SHA1: c3f6c12308cf66d58c8fb4ffa4eebc433014a1d5
-SHA256: ce8e85d9d1c29673e4ef1ce0c6d35a9944a4bfd68d0258cdfaa6757ab82539b7
-Section: Tweaks
 Description: autoios HTTP :2000 in SpringBoard + bundled TrollVNC View.
+Maintainer: manhvip
 Author: manhvip
-Name: AutoIOS
-
+Section: Tweaks
+Icon: https://cdn.jsdelivr.net/gh/manhvip/autoios-repo@main/CydiaIcon.png
+Replaces: com.manhvip.autoios-vnc
+Conflicts: com.manhvip.autoios-vnc
+Provides: com.manhvip.autoios-vnc
+Architecture: iphoneos-arm64
+Version: 0.4.108
+Installed-Size: 7284
+Filename: debs/com.manhvip.autoios_0.4.108_iphoneos-arm64.deb
+Size: 1917854
+MD5sum: 698ab573b320068deeed9ca82ee723f5
+SHA1: 40241ddb7578adf5184242b646695c3f23b9c937
+SHA256: e633f3bbfd4f592123faa966b72af2e5fe6ed20f5e3a6c293f0a39e570176ecb
