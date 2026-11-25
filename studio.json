@@ -1,15 +1,15 @@
 {
-  "version": "0.2.51",
+  "version": "0.2.52",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.51 \u2014 farm JPEG stream (experimental, c\u1ea7n Device 0.4.115).",
+  "notes": "Studio 0.2.52 \u2014 farm sync + rounded tiles + USB install-all + update fix (c\u1ea7n Device 0.4.116).",
   "minDevice": "0.4.107",
-  "recommendedDevice": "0.4.115",
+  "recommendedDevice": "0.4.116",
   "downloads": {
     "win": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio-Setup.exe",
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "5c38c8de45bf321d5a4649ac3dbd692b5a755f7f42db7813726bbeb44f745958",
-    "mac": "eb2ffa09af99ffca4fc995ab86687a48eac4732f59c750075aff062298c9d644"
+    "win": "3930d3c29a48e1b27b25a6c277ef2528aa9e31269633f064b0e4e362b3a24885",
+    "mac": "c9e885c3cd1e7414a84b4ac5a4a578ad7bcb9be7673ea13cd01608682e62f02e"
   }
 }

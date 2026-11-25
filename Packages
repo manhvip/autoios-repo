@@ -10,11 +10,11 @@ Replaces: com.manhvip.autoios-vnc
 Conflicts: com.manhvip.autoios-vnc
 Provides: com.manhvip.autoios-vnc
 Architecture: iphoneos-arm64
-Version: 0.4.115
-Installed-Size: 7300
-Filename: debs/com.manhvip.autoios_0.4.115_iphoneos-arm64.deb
-Size: 1925648
-MD5sum: 5b7afbc299bcf350d6ab729f2031b0ed
-SHA1: 5972ea86416ca2ab447419cac15898da90f9f5bb
-SHA256: cdcf63e9d8d1de11ba03a629ade08037a05def1eb2e3ae3ca275e0c4ace8c51d
+Version: 0.4.116
+Installed-Size: 7308
+Filename: debs/com.manhvip.autoios_0.4.116_iphoneos-arm64.deb
+Size: 1927190
+MD5sum: d5226964a52d52e8df33d44b547b086c
+SHA1: e319c1b47d65539ab476718768702fe1c7dacb02
+SHA256: 911dda342d763b2df72a31a3d542026e8bdc6a7bad61f6cf6dd2f064a6b1a5bf
 

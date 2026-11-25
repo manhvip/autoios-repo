@@ -5,13 +5,13 @@ Codename: ios
 Architectures: iphoneos-arm64
 Components: main
 Description: AutoIOS device packages
-Date: Wed, 25 Nov 2026 10:13:04 UTC
+Date: Wed, 25 Nov 2026 10:59:00 UTC
 MD5Sum:
- 34134f713e5bf6a0ca856e0943aafc41 695 Packages
- e7eedb3cb6a51fca6c416d1ce1b52e23 461 Packages.gz
+ b024571df7b9136380ea29388fe31707 695 Packages
+ 9d12dffaf63b0978daa2b0500eb3e518 464 Packages.gz
 SHA1:
- ba56faf4168728d7612fe6ff67bb0df85d299a22 695 Packages
- be911ef8ba00a05193794cee59a8fdd7451c9dda 461 Packages.gz
+ 71d7a1a71880ff0fba489608c332e8b635132902 695 Packages
+ 679e0a959cff14bee5fc9c73f929b18153e8c6a2 464 Packages.gz
 SHA256:
- 6a19b3f72746638b6f4232d2cb813f31f81ab09a3cee3390edf104374762235b 695 Packages
- 5772eace3e4ad066aefa0a113b0a1dd900f84ba53d1932080eaa829be207a96b 461 Packages.gz
+ 73580b2e4652eadb1300156959d48e38dfa843cecf46a606f13b3d92316be88d 695 Packages
+ c9f5bdc21f5e4744e48c751131a10cbfceb8df647884e852b039a5c5abaec405 464 Packages.gz
