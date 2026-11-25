@@ -1,7 +1,7 @@
 {
-  "version": "0.2.54",
+  "version": "0.2.55",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.54 \u2014 tab All/USB/Wi-Fi, gi\u1eef \u0111\u1ee7 \u00f4 m\u00e1y, sync thao t\u00e1c m\u00e0n h\u00ecnh; c\u1ea7n Device 0.4.116.",
+  "notes": "Studio 0.2.55 \u2014 sidebar Lua fan-out, vi\u1ec1n s\u1ed1 m\u00e1y, b\u1ecf c\u00e0i USB .deb trong app; c\u1ea7n Device 0.4.116.",
   "minDevice": "0.4.107",
   "recommendedDevice": "0.4.116",
   "downloads": {
@@ -9,7 +9,7 @@
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "b133ffa0f5966fc0d71bef060458f6c967c386e0bfb21e88a09cdd40fee97926",
-    "mac": "6d611a86fb0fe0ddd0f93331c42ef5e188b25d6cb49b34b343de6819f3117a10"
+    "win": "319c49df8edd2e5efd55ba565ca642bfa0aa1c5c0652680fc2a430cdf59a4d03",
+    "mac": "fd76251415fd95b1e90effd2a39470d267581c77053c9499c2cc3bc9760c10e4"
   }
 }
