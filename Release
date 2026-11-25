@@ -4,14 +4,14 @@ Suite: stable
 Codename: ios
 Architectures: iphoneos-arm64
 Components: main
-Description: AutoIOS Device packages for Sileo
-Date: Wed, 25 Nov 2026 07:08:00 +0000
+Description: AutoIOS device packages
+Date: Wed, 25 Nov 2026 08:59:12 UTC
 MD5Sum:
- 4ed6bbb241f7d1addd7ab52fc9137550 695 Packages
- e4965832752d8f9fb9f306efda0fdeb2 454 Packages.gz
+ 2b5560e64a5bdb66e548ca728f114220 695 Packages
+ 32d6cdbf2ea978e0a0404d864e924a7c 461 Packages.gz
 SHA1:
- e70c96a9ed8ec3dee74c9ea6af53af201f652a18 695 Packages
- d6decb302ac473e3c9b0b41e575ceeae076e1516 454 Packages.gz
+ d2b707804790c112f216869b3eb531a781425c90 695 Packages
+ 5fe19a4fe313a66c8a6811ec1ac7d0e2c67169c8 461 Packages.gz
 SHA256:
- 236d2c49ed9d343f137bbff558abf6d088939f692780ae7110a3e5519a5bcaa1 695 Packages
- 2652fe2cc5c3bab2ebafb8aeea9cebf1437d14a9a3311a81fd89323555877f8b 454 Packages.gz
+ b81d7002139e34359fbcd48d1e06d56c0d688008c7baa2654692f09cda06bbac 695 Packages
+ 329b589d14d0c3064ec456b7ea27f53ffb60fbadb87cf4a1b671fbc1fc6847d2 461 Packages.gz

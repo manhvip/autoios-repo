@@ -1,15 +1,15 @@
 {
-  "version": "0.2.49",
+  "version": "0.2.50",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.49 \u2014 t\u1ef1 t\u1ea3i/c\u00e0i trong app; l\u01b0\u1edbi nhi\u1ec1u m\u00e1y h\u1ea1 FPS + b\u1ecf stream \u00f4 xa m\u00e0n h\u00ecnh (c\u1ea7n Device 0.4.113).",
+  "notes": "Studio 0.2.50 \u2014 farm H.264 stream (experimental, c\u1ea7n Device 0.4.114).",
   "minDevice": "0.4.107",
-  "recommendedDevice": "0.4.113",
+  "recommendedDevice": "0.4.114",
   "downloads": {
     "win": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio-Setup.exe",
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "b0015eb8acdd2568073ccc2620819ff65d136ebce24f142e9794b4dc54b3460c",
-    "mac": "85df79a1dbde2c26091e3b876d34b7a609ef2730d645f5c7f7c558e098526bf9"
+    "win": "1cfbb1210e7c22c56e38edd9dbcf69755608ff43daaefd838289064cf1ac1e57",
+    "mac": "259c671a5d88c934b16b1d324068a36f7760ec689959c06c83d886462d5ea647"
   }
 }
