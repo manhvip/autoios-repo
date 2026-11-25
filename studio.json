@@ -1,7 +1,7 @@
 {
-  "version": "0.2.56",
+  "version": "0.2.57",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.56 \u2014 refresh USB token, t\u00ean AutoIOS, retry touch farm; c\u1ea7n Device 0.4.116.",
+  "notes": "Studio 0.2.57 \u2014 gi\u1eef m\u1ecdi m\u00e1y USB c\u1eafm tr\u00ean farm; c\u1ea7n Device 0.4.116.",
   "minDevice": "0.4.107",
   "recommendedDevice": "0.4.116",
   "downloads": {
@@ -9,7 +9,7 @@
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "11a01f50a432b7ae42b1e4bd8aa809bc0b85815feca598b46dea7a485b999f16",
-    "mac": "85491e4b4055d28ed46e8b5bf9c8cd764645cf3d871794a17384a15f4e1d5770"
+    "win": "6fbd595805f752df0fcafa8630bdf9242b9cf2f0b466b4312bf1b53c5d160572",
+    "mac": "07c6bab0789dab7f229880a97af7b988b44c3bff86c1a342e660e66f95784b81"
   }
 }
