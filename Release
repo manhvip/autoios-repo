@@ -1,18 +1,17 @@
 Origin: AutoIOS
 Label: AutoIOS
 Suite: stable
-Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm64
 Components: main
-Description: AutoIOS device packages
-Date: Wed, 25 Nov 2026 04:55:55 +0000
+Description: AutoIOS Device packages for Sileo
+Date: Wed, 25 Nov 2026 07:08:00 +0000
 MD5Sum:
- f55540de51a0c517c17721385dbadd56 695 Packages
- 8d860e82adfb76970900ae19937cc9a4 453 Packages.gz
+ 4ed6bbb241f7d1addd7ab52fc9137550 695 Packages
+ e4965832752d8f9fb9f306efda0fdeb2 454 Packages.gz
 SHA1:
- d5e41a3f1a3d4e77a3ab1efa7ee6c9aed5497d34 695 Packages
- 51d0137a8683a4509c10f94a5223d2cb36545dd4 453 Packages.gz
+ e70c96a9ed8ec3dee74c9ea6af53af201f652a18 695 Packages
+ d6decb302ac473e3c9b0b41e575ceeae076e1516 454 Packages.gz
 SHA256:
- af0107b65052ae61ffe2f269bb3b48ce4de4055430bb1066f02770cace197553 695 Packages
- 576df6bd5abc5a288c12d5f3c05477086af9e8ec01a8514d89a2c3d01ef95ae7 453 Packages.gz
+ 236d2c49ed9d343f137bbff558abf6d088939f692780ae7110a3e5519a5bcaa1 695 Packages
+ 2652fe2cc5c3bab2ebafb8aeea9cebf1437d14a9a3311a81fd89323555877f8b 454 Packages.gz
