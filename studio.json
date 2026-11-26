@@ -1,7 +1,7 @@
 {
-  "version": "0.2.63",
+  "version": "0.2.64",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.63 \u2014 in-app update ghi \u0111\u00e8 /Applications; Device 0.4.119.",
+  "notes": "Studio 0.2.64 \u2014 sync inputText, master dock, stream popup, disconnect. Device 0.4.119.",
   "minDevice": "0.4.118",
   "recommendedDevice": "0.4.119",
   "downloads": {
@@ -9,7 +9,7 @@
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "219dc5be5cfe2163760aa1fa0d9b84623593da1a9d0e3653c316b832b227c4fa",
-    "mac": "ff1c61550e6abc114a3a51c29f57c57ea5f5cd34a0a37736f574c83d03c31852"
+    "win": "4ebf32271f1a09757ae12d6e1ea2bd9b36cdc6612ea289ba86f4fbd927b9dcb5",
+    "mac": "713cf2b480457d5248ea9eaae7691535cbfb00653847d1219767d815a2be0e1e"
   }
 }
