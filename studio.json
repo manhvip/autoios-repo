@@ -1,7 +1,7 @@
 {
-  "version": "0.2.59",
+  "version": "0.2.60",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.59 \u2014 farm JPEG scale/quality ki\u1ec3u RouterMMO; c\u1ea7n Device 0.4.117.",
+  "notes": "Studio 0.2.60 \u2014 farm JPEG: fps th\u1ef1c t\u1ebf ~4/14 \u00f4, scale kh\u00f4ng k\u00e9o t\u1ed1i thi\u1ec3u 25%; c\u1ea7n Device 0.4.117.",
   "minDevice": "0.4.107",
   "recommendedDevice": "0.4.117",
   "downloads": {
@@ -9,7 +9,7 @@
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "2ea7d669d014629d6ba38fb77a7aeed680528a5895cbe43c4bdf9512ddf88f13",
-    "mac": "0fedec6dd76f3eb010c8516c0b0a98525661fbac9f5aebdef324c61c63fe7b85"
+    "win": "e80075196e62b3901df99967faa6399f1f52389814e4239c8b7933d6ed795bfe",
+    "mac": "130bc3e27cbbc2fc874129e75e6f71c7c7c9119dd77ba2b6d13c7896221ea941"
   }
 }
