@@ -1,7 +1,7 @@
 {
-  "version": "0.2.72",
+  "version": "0.2.73",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.72 \u2014 m\u1ecdi \u00f4 farm JPEG chung; theme/ng\u00f4n ng\u1eef tr\u00ean Settings; sidebar sync. Device 0.4.119.",
+  "notes": "Studio 0.2.73 \u2014 flow palette Genfarmer-style + blank variables; Free/Premium status. Device 0.4.119.",
   "minDevice": "0.4.118",
   "recommendedDevice": "0.4.119",
   "downloads": {
@@ -9,7 +9,7 @@
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "9e5e953f4442c395a2eed43dd0a9b601a2b39604c5b59c6d595c90ae1edd466c",
-    "mac": "ed936bdb907529ce40dad4672c6b6191903630c06e81326ec9818db15eeb927f"
+    "win": "df0f296d3241ac64d27b80feadbdf51bb164df62045c7523af8e517720ba5bc0",
+    "mac": "185f7a178db65df3e8a434ff22958fa68e3179497fd7c59b47acaecc07cf4d06"
   }
 }
