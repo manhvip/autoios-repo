@@ -1,7 +1,7 @@
 {
-  "version": "0.2.65",
+  "version": "0.2.66",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.65 \u2014 farm sync UI: master tiles b\u1eb1ng nhau, b\u00e0n ph\u00edm mirror, popup portal. Device 0.4.119.",
+  "notes": "Studio 0.2.66 \u2014 farm grid + popup console ki\u1ec3u RouterMMO. Device 0.4.119.",
   "minDevice": "0.4.118",
   "recommendedDevice": "0.4.119",
   "downloads": {
@@ -9,7 +9,7 @@
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "7911d101115ebed6eac530c17c7cc9a1b8300b09fec87673376a1225a4285cd0",
-    "mac": "516a5cf78268ca55577ba982be0049730cfe56c83b4f999ad6798218507f9bf8"
+    "win": "73ad8cf53fcd0f8e687764235d3363626c8fd1634a8778f20ffa8d4a9a930dd2",
+    "mac": "76f6fd2e3c0076349a6f80e61aa19c7b78c7dcc009d0424d276715f0315a9cfa"
   }
 }
