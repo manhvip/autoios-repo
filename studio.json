@@ -1,7 +1,7 @@
 {
-  "version": "0.2.64",
+  "version": "0.2.65",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.64 \u2014 sync inputText, master dock, stream popup, disconnect. Device 0.4.119.",
+  "notes": "Studio 0.2.65 \u2014 farm sync UI: master tiles b\u1eb1ng nhau, b\u00e0n ph\u00edm mirror, popup portal. Device 0.4.119.",
   "minDevice": "0.4.118",
   "recommendedDevice": "0.4.119",
   "downloads": {
@@ -9,7 +9,7 @@
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "4ebf32271f1a09757ae12d6e1ea2bd9b36cdc6612ea289ba86f4fbd927b9dcb5",
-    "mac": "713cf2b480457d5248ea9eaae7691535cbfb00653847d1219767d815a2be0e1e"
+    "win": "7911d101115ebed6eac530c17c7cc9a1b8300b09fec87673376a1225a4285cd0",
+    "mac": "516a5cf78268ca55577ba982be0049730cfe56c83b4f999ad6798218507f9bf8"
   }
 }
