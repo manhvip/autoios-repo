@@ -1,15 +1,15 @@
 {
-  "version": "0.2.60",
+  "version": "0.2.61",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.60 \u2014 farm JPEG: fps th\u1ef1c t\u1ebf ~4/14 \u00f4, scale kh\u00f4ng k\u00e9o t\u1ed1i thi\u1ec3u 25%; c\u1ea7n Device 0.4.117.",
-  "minDevice": "0.4.107",
-  "recommendedDevice": "0.4.117",
+  "notes": "Studio 0.2.61 \u2014 MJPEG hub :20450, farm qua ws/api/mjpeg; c\u1ea7n Device 0.4.118 (AutoiosScreen).",
+  "minDevice": "0.4.118",
+  "recommendedDevice": "0.4.118",
   "downloads": {
     "win": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio-Setup.exe",
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "e80075196e62b3901df99967faa6399f1f52389814e4239c8b7933d6ed795bfe",
-    "mac": "130bc3e27cbbc2fc874129e75e6f71c7c7c9119dd77ba2b6d13c7896221ea941"
+    "win": "a76b9961d705dd8c4869ff4dbb6d5214ac9727db976a21be8842c0e57f4b82f5",
+    "mac": "7e9ea197b37e87b9f53102363d5802f09229790e51524f6b9c581b638335930d"
   }
 }
