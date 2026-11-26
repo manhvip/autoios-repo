@@ -1,7 +1,7 @@
 {
-  "version": "0.2.67",
+  "version": "0.2.68",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.67 \u2014 m\u00e1y ch\u1ee7 c\u1ed9t tr\u00e1i, float popup, JPEG socket \u1ed5n \u0111\u1ecbnh. Device 0.4.119.",
+  "notes": "Studio 0.2.68 \u2014 b\u1ecf nh\u00e3n \u0110\u1ed3ng b\u1ed9/Ch\u1ee7; g\u00f5 ph\u00edm PC qua HID keys. Device 0.4.119.",
   "minDevice": "0.4.118",
   "recommendedDevice": "0.4.119",
   "downloads": {
@@ -9,7 +9,7 @@
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "f9d9f28451074afa4723365f7b85f3829b764240570b1429571a4ee371b739b8",
-    "mac": "63ca05ed81caee1f8f58c0a781e1b767c3721e74026d4d8ed8ff73b23bcd58ef"
+    "win": "7a3eff20d6751d6b7862e4c56efeaf07d0db0dfa2f83f95aa67de3f2b815fe4e",
+    "mac": "97bfa5ae45b6079e3596d4c840ea96c6f21f8941e05b04b042519db67aa5648a"
   }
 }
