@@ -1,7 +1,7 @@
 {
-  "version": "0.2.74",
+  "version": "0.2.75",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.74 \u2014 flow canvas: d\u00e2y ok/fail n\u00e9t \u0111\u1ee9t, menu chu\u1ed9t ph\u1ea3i, c\u1ed5ng fail. Device 0.4.119.",
+  "notes": "Studio 0.2.75 \u2014 tab Lua/flow; flow v\u00f9ng t\u00ecm + tap m\u00e0u t\u1eeb View. Device 0.4.119.",
   "minDevice": "0.4.118",
   "recommendedDevice": "0.4.119",
   "downloads": {
@@ -9,7 +9,7 @@
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "e85c35eb0ef6855432f3a0be0aa1e6f5fc6430054875d8048cf7d8a7e3fab8d8",
-    "mac": "068bee60e702e6e2f794eb2e2226380ace1dc258940c737f80c3b956d4491d26"
+    "win": "f773facb8d7f3112677b75bb4f5a134616375d3eeade38857f1902e95cf2bdfd",
+    "mac": "15569a5c63c5be83dec08e0bc60df7242b01b09df0852335350a7ae826fcccae"
   }
 }
