@@ -1,7 +1,7 @@
 {
-  "version": "0.2.62",
+  "version": "0.2.63",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.62 \u2014 JPEG farm \u0111\u00fang ng\u00e2n s\u00e1ch fps; Device 0.4.119 idle grab fix.",
+  "notes": "Studio 0.2.63 \u2014 in-app update ghi \u0111\u00e8 /Applications; Device 0.4.119.",
   "minDevice": "0.4.118",
   "recommendedDevice": "0.4.119",
   "downloads": {
@@ -9,7 +9,7 @@
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "312964550fcdb1a3dc50b8c48a4e8fdb2e22b08bdd39ded0973f071d7f275d60",
-    "mac": "8cecf591f5309db7682e07c47f5e17d49e1ff9cd11983b38ea05495755b115f0"
+    "win": "219dc5be5cfe2163760aa1fa0d9b84623593da1a9d0e3653c316b832b227c4fa",
+    "mac": "ff1c61550e6abc114a3a51c29f57c57ea5f5cd34a0a37736f574c83d03c31852"
   }
 }
