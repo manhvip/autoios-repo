@@ -1,15 +1,15 @@
 {
-  "version": "0.2.77",
+  "version": "0.2.78",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.77 \u2014 Helper Home Screen app list; c\u1ea7n Device 0.4.121.",
+  "notes": "Studio 0.2.78 \u2014 kh\u1ed1i \u0110\u1ed5i m\u00e1y / setSpoof; c\u1ea7n Device 0.4.122.",
   "minDevice": "0.4.118",
-  "recommendedDevice": "0.4.121",
+  "recommendedDevice": "0.4.122",
   "downloads": {
     "win": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio-Setup.exe",
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "ed2e46e6ae1b5461684dd25e90349de7d2123a1850d8c45ae7f28a6ca1758f60",
-    "mac": "788b197338f8437f25b03fd48e9df58e6d06ce33c46bce0497261610c880d080"
+    "win": "0f429e554e58febcb11d8a9c3ac04d3f6fc3ca4203b3f1967e1f9e2fe9b5e8dc",
+    "mac": "09a4ebc46dc1775a9daacbebe2c88cb754ca21f14e7867a88c84fb66e7c86613"
   }
 }
