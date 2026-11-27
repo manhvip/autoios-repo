@@ -1,9 +1,9 @@
 {
   "version": "0.2.79",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.79 \u2014 \u0110\u1ed5i m\u00e1y Settings About + GPS; c\u1ea7n Device 0.4.123.",
+  "notes": "Studio 0.2.79 \u2014 \u0110\u1ed5i m\u00e1y; khuy\u1ebfn ngh\u1ecb Device 0.4.124 (spoof d\u00f2ng Model).",
   "minDevice": "0.4.118",
-  "recommendedDevice": "0.4.123",
+  "recommendedDevice": "0.4.124",
   "downloads": {
     "win": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio-Setup.exe",
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
