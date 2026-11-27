@@ -1,15 +1,15 @@
 {
-  "version": "0.2.79",
+  "version": "0.2.80",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.79 \u2014 \u0110\u1ed5i m\u00e1y; khuy\u1ebfn ngh\u1ecb Device 0.4.124 (spoof d\u00f2ng Model).",
+  "notes": "Studio 0.2.80 \u2014 farm grid budget; c\u1ea7n Device 0.4.125 (TrollVNC qua autoios-vnc-run).",
   "minDevice": "0.4.118",
-  "recommendedDevice": "0.4.124",
+  "recommendedDevice": "0.4.125",
   "downloads": {
     "win": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio-Setup.exe",
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "f4e8cc7b6137c2794ce720ecadf0a929bfdcce931521b99b01e6fddc1245cff2",
-    "mac": "b07c00e22c95869b7e1ff783529903b329d0d63477df7fa73f15f30a19b44334"
+    "win": "8f691bae2e7ae30d2e01aedd0546ffc07f3b50500bdb261b4003383bc4712991",
+    "mac": "f57e37505271243b17144a8b4dbb16c5463a23ab2a625d53505858f41892bb22"
   }
 }
