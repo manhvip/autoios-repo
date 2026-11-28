@@ -1,15 +1,15 @@
 {
-  "version": "0.2.80",
+  "version": "0.2.81",
   "url": "https://autoios.mxmmo.com/en/install-studio",
-  "notes": "Studio 0.2.80 \u2014 farm grid budget; c\u1ea7n Device 0.4.125 (TrollVNC qua autoios-vnc-run).",
+  "notes": "Studio 0.2.81 \u2014 hub xin fps cao h\u01a1n tile; c\u1ea7n Device 0.4.126 (autoios-vnc-run).",
   "minDevice": "0.4.118",
-  "recommendedDevice": "0.4.125",
+  "recommendedDevice": "0.4.126",
   "downloads": {
     "win": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio-Setup.exe",
     "mac": "https://autoios.mxmmo.com/downloads/Auto-IOS-Studio.dmg"
   },
   "sha256": {
-    "win": "8f691bae2e7ae30d2e01aedd0546ffc07f3b50500bdb261b4003383bc4712991",
-    "mac": "f57e37505271243b17144a8b4dbb16c5463a23ab2a625d53505858f41892bb22"
+    "win": "a7636d3ad61c6039c77abfc0fd1e011c059bf7bf9000fbe86bda4f60445d7070",
+    "mac": "9c973449c5f1eb8c69b11fe3f5a2b86352fa21ad11f20b65d15c4d3bb9582088"
   }
 }
